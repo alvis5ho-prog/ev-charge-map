@@ -1,0 +1,90 @@
+[
+  {
+    "itemId": "1033",
+    "title": "Cheung Fat Plaza",
+    "lat": 22.362646,
+    "lng": 114.102919,
+    "total": 3,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1010",
+    "title": "Hong Kong Science Park",
+    "lat": 22.4264375,
+    "lng": 114.2100081,
+    "total": 20,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1012",
+    "title": "Ocean Terminal",
+    "lat": 22.29507,
+    "lng": 114.167123,
+    "total": 5,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1028",
+    "title": "Langham Place",
+    "lat": 22.3173285,
+    "lng": 114.1687001,
+    "total": 3,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1007",
+    "title": "Tuen Mun Town Plaza 1",
+    "lat": 22.3930623,
+    "lng": 113.9764142,
+    "total": 2,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1027",
+    "title": "Tai Wo Plaza",
+    "lat": 22.4504338,
+    "lng": 114.1606884,
+    "total": 3,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1030",
+    "title": "Citygate",
+    "lat": 22.29085454,
+    "lng": 113.9431709,
+    "total": 2,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  },
+  {
+    "itemId": "1040",
+    "title": "Shatin Centre",
+    "lat": 22.3821957,
+    "lng": 114.189987,
+    "total": 3,
+    "available": 0,
+    "outOfService": 0,
+    "lastUpdate": "2026-11-10 12:06:12",
+    "status": "Status_Not_Available"
+  }
+]

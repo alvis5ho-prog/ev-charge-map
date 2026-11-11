@@ -1,0 +1,23 @@
+# Node
+node_modules/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Test files
+_test*.js
+
+# Temp
+*.tmp
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Note: uploads/ is gitignored (reports are structured data only, no photos)
+uploads/*.jpg
+uploads/*.png
+uploads/*.jpeg

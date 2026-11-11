@@ -1,0 +1,8 @@
+{
+  "stationId": "test-station",
+  "issueType": "queue",
+  "description": "test",
+  "photoUrl": "/uploads/test-station_1794380650119.jpg",
+  "timestamp": "2026-11-11 15:04:10",
+  "status": "pending_ai_analysis"
+}

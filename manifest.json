@@ -1,0 +1,27 @@
+{
+  "name": "香港電動車充電地圖",
+  "short_name": "充電地圖",
+  "description": "香港電動車充電站地圖 — AI 評分 + 即時排隊資訊",
+  "lang": "zh-HK",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F4F6F9",
+  "theme_color": "#0D47A1",
+  "categories": ["navigation", "utilities", "travel"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

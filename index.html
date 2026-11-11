@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-HK" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0D47A1">
+  <meta name="description" content="香港電動車充電站地圖 — AI 評分 + 即時排隊資訊">
+  <title>充電地圖 | EV Charge Map</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Leaflet (local) -->
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <script src="lib/leaflet.js"></script>
+
+  <!-- App -->
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+      </svg>
+      <span data-i18n="appTitle">充電地圖</span>
+    </div>
+
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input id="searchInput" type="text" data-i18n-ph="searchPlaceholder" placeholder="搜尋地址、商場、充電品牌…" autocomplete="off">
+    </div>
+
+    <div class="topbar-actions">
+      <button class="icon-btn" id="btnList" title="清單">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnDark" title="深色模式">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="btnSettings" title="設定">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Search results -->
+  <div class="search-results" id="searchResults"></div>
+
+  <!-- ===== Map ===== -->
+  <div class="map-area">
+    <div id="map"></div>
+
+    <!-- Legend -->
+    <button class="icon-btn" id="legendOpen" style="position:absolute;top:var(--sp-3);right:calc(var(--sar) + var(--sp-3));z-index:var(--z-legend);background:var(--bg-overlay);border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--shadow-sm);" title="圖例">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    </button>
+
+    <div class="legend" id="legend">
+      <h4>
+        <span data-i18n="legend">圖例</span>
+        <button id="legendToggle">✕</button>
+      </h4>
+
+      <div class="legend-section">
+        <div class="legend-section-title" data-i18n="availStatus">空位狀況</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#22C55E"></div><span data-i18n="availPlenty">空位充足</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#84CC16"></div><span data-i18n="availSome">少量空位</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div><span data-i18n="availBusy">繁忙</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#EF4444"></div><span data-i18n="availFull">滿座／排隊</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3B82F6"></div><span data-i18n="availMaint">維修中</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#9CA3AF"></div><span data-i18n="availNoData">無即時數據</span></div>
+      </div>
+
+      <div class="legend-section">
+        <div class="legend-section-title" data-i18n="liveStatus">現場實況</div>
+        <div class="legend-item"><div class="legend-ring" style="border-color:#22C55E"></div><span data-i18n="ringAvailable">有空位</span></div>
+        <div class="legend-item"><div class="legend-ring double" style="border-color:#F59E0B;color:#F59E0B"></div><span data-i18n="ringBusy">滿座</span></div>
+        <div class="legend-item"><div class="legend-ring" style="border-color:#EF4444"></div><span data-i18n="ringCrowded">大排長龍</span></div>
+        <div class="legend-item"><div class="legend-ring" style="border-color:#9CA3AF;border-style:dotted"></div><span data-i18n="ringNoData">暫無數據</span></div>
+        <div class="legend-item"><div class="legend-ring" style="border-color:#3B82F6"></div><span data-i18n="ringMaintenance">維修中</span></div>
+        <div class="legend-item"><div class="legend-ring" style="border-color:#A78BFA;border-style:dashed"></div><span data-i18n="ringUnverified">用戶回報</span></div>
+      </div>
+    </div>
+
+    <!-- Network badge -->
+    <div class="net-badge" id="netBadge">
+      <div class="dot"></div>
+      <span class="net-text">在線</span>
+    </div>
+
+    <!-- Battery slider dock -->
+    <div class="low-bat-alert hidden" id="lowBatAlert"></div>
+    <div class="battery-dock">
+      <div class="bat-label" data-i18n="batteryLevel">電量</div>
+      <div class="bat-value" id="batteryValue">35%</div>
+      <div class="bat-slider-wrap">
+        <input type="range" id="batterySlider" min="0" max="100" step="1" value="35">
+      </div>
+      <svg class="bat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2"/>
+      </svg>
+    </div>
+
+    <!-- Camera FAB -->
+    <button class="fab" id="fabReport" title="回報">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+        <circle cx="12" cy="13" r="4"/>
+      </svg>
+    </button>
+
+    <!-- Install banner -->
+    <div class="install-banner" id="installBanner">
+      <div class="ib-text" data-i18n="installTitle">安裝到主畫面</div>
+      <button class="ib-btn" id="installBtn" data-i18n="installBtn">立即安裝</button>
+      <button class="ib-close" id="installClose">✕</button>
+    </div>
+
+    <!-- ===== Station panel (bottom sheet / side panel) ===== -->
+    <div class="panel" id="stationPanel">
+      <div class="panel-handle"></div>
+      <div class="panel-header">
+        <div class="panel-title">
+          <h2 id="panelTitle">—</h2>
+          <div class="panel-sub" id="panelSub"></div>
+        </div>
+        <button class="panel-close" id="panelClose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="panel-body" id="panelBody"></div>
+    </div>
+
+    <!-- ===== List panel ===== -->
+    <div class="list-panel" id="listPanel">
+      <div class="list-header">
+        <h3 data-i18n="list">清單</h3>
+        <button class="icon-btn" id="listClose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="list-sort" id="listSort"></div>
+      <div class="list-body" id="listBody"></div>
+    </div>
+
+  </div><!-- /map-area -->
+</div><!-- /app -->
+
+<!-- ===== Modals ===== -->
+
+<!-- Settings -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="settings">設定</h3>
+      <button class="icon-btn" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- Language -->
+      <div class="setting-row">
+        <div class="setting-label">
+          <span data-i18n="language">語言</span>
+          <small>繁體中文 / English</small>
+        </div>
+        <select class="sel" id="selLang">
+          <option value="zh-HK">繁體中文</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <!-- Theme -->
+      <div class="setting-row">
+        <div class="setting-label">
+          <span data-i18n="darkMode">深色模式</span>
+          <small>Auto / Light / Dark</small>
+        </div>
+        <select class="sel" id="selTheme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <!-- High contrast -->
+      <div class="setting-row">
+        <div class="setting-label">
+          <span data-i18n="highContrast">高對比模式</span>
+          <small>WCAG AA</small>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="chkContrast">
+          <div class="slider"></div>
+        </label>
+      </div>
+
+      <!-- Car model -->
+      <div class="setting-row">
+        <div class="setting-label">
+          <span data-i18n="carModel">車型</span>
+          <small data-i18n="carModelPlaceholder">選擇車型</small>
+        </div>
+        <select class="sel" id="selCarModel"></select>
+      </div>
+
+      <!-- Custom car params -->
+      <div id="customCarWrap" class="hidden">
+        <div class="setting-row">
+          <div class="setting-label">
+            <span data-i18n="customBattery">電池容量</span>
+            <small data-i18n="unitKwh">kWh</small>
+          </div>
+          <input class="sel" type="number" id="inpCustomBat" value="60" min="10" max="200" style="width:80px;min-width:80px">
+        </div>
+        <div class="setting-row">
+          <div class="setting-label">
+            <span data-i18n="customMaxDC">最大 DC 功率</span>
+            <small data-i18n="unitKw">kW</small>
+          </div>
+          <input class="sel" type="number" id="inpCustomDC" value="100" min="20" max="500" style="width:80px;min-width:80px">
+        </div>
+      </div>
+
+      <!-- Offline regions -->
+      <div class="p-section">
+        <div class="p-section-title" data-i18n="offlineRegions">離線地圖下載</div>
+        <div class="region-row">
+          <div class="region-info">
+            <div class="region-name" data-i18n="regionHK">港島區</div>
+            <div class="region-size">~18 MB</div>
+          </div>
+          <button class="region-action" data-region="hk" data-i18n="download">下載</button>
+        </div>
+        <div class="region-row">
+          <div class="region-info">
+            <div class="region-name" data-i18n="regionKLN">九龍區</div>
+            <div class="region-size">~22 MB</div>
+          </div>
+          <button class="region-action" data-region="kln" data-i18n="download">下載</button>
+        </div>
+        <div class="region-row">
+          <div class="region-info">
+            <div class="region-name" data-i18n="regionNT">新界及離島區</div>
+            <div class="region-size">~35 MB</div>
+          </div>
+          <button class="region-action" data-region="nt" data-i18n="download">下載</button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="p-section">
+        <div class="p-section-title" data-i18n="about">關於</div>
+        <p class="text-sm text-muted" data-i18n="aboutDesc"></p>
+        <p class="text-xs text-muted mt-2" data-i18n="disclaimer"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Report -->
+<div class="modal-overlay" id="reportModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="reportTitle">拍照回報</h3>
+      <button class="icon-btn" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body report-form">
+      <div class="text-sm font-600" id="reportStationName">—</div>
+      <p class="text-xs text-muted mt-1" data-i18n="reportDesc">回報此站的即時資訊，幫助其他車主。必須附上現場相片。</p>
+
+      <!-- Issue type selector -->
+      <div class="p-section-title mt-3" data-i18n="issueType">問題類型</div>
+      <div class="issue-type-grid" id="issueTypeGrid">
+        <button class="issue-chip" data-type="broken">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          <span data-i18n="issueBroken">充電槍損壞</span>
+        </button>
+        <button class="issue-chip" data-type="payment">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <span data-i18n="issuePayment">付款故障</span>
+        </button>
+        <button class="issue-chip" data-type="occupied">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+          <span data-i18n="issueOccupied">被佔位／佔用</span>
+        </button>
+        <button class="issue-chip" data-type="queue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <span data-i18n="issueQueue">排隊狀況</span>
+        </button>
+        <button class="issue-chip" data-type="info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span data-i18n="issueInfo">資訊更正</span>
+        </button>
+        <button class="issue-chip" data-type="other">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          <span data-i18n="issueOther">其他</span>
+        </button>
+      </div>
+
+      <!-- Photo upload (required) -->
+      <div class="p-section-title mt-3" data-i18n="photoRequired">現場相片（必須）</div>
+      <div class="photo-upload-zone" id="photoUploadZone">
+        <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none">
+        <div class="photo-upload-prompt" id="photoUploadPrompt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          <div class="text-sm font-600 mt-2" data-i18n="photoTap">點擊拍照或上載相片</div>
+          <div class="text-xs text-muted" data-i18n="photoHint">相片有助其他車主辨別現場狀況</div>
+        </div>
+        <div class="photo-preview hidden" id="photoPreview">
+          <img id="photoPreviewImg" alt="report photo">
+          <button class="photo-remove-btn" id="photoRemoveBtn">✕</button>
+        </div>
+      </div>
+
+      <!-- AI analysis result (shown after photo upload) -->
+      <div class="ai-analysis hidden" id="aiAnalysis">
+        <div class="p-section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/><path d="M16 14H8a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4z"/></svg>
+          AI 分析結果（請確認或修改）
+        </div>
+        <div class="ai-result-grid" id="aiResultGrid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="p-section-title mt-3" data-i18n="reportDescTitle">詳細描述</div>
+      <textarea id="reportText" data-i18n-ph="reportPlaceholder" placeholder="描述現場情況（例如：2 號槍壞咗、App 付款失敗、有車停咗但冇充電）"></textarea>
+
+      <!-- Submit -->
+      <div class="action-row">
+        <button class="btn btn-ghost" data-close-modal data-i18n="cancel">取消</button>
+        <button class="btn btn-primary" id="reportSubmitBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          <span data-i18n="submitReport">提交回報</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Report verification result -->
+<div class="modal-overlay" id="verifyModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="verifyTitle">回報已提交</h3>
+      <button class="icon-btn" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="verifyBody">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- Install help (fallback) -->
+<div class="modal-overlay" id="installModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="installTitle">安裝到主畫面</h3>
+      <button class="icon-btn" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="p-section">
+        <div class="p-section-title">iOS</div>
+        <p class="text-sm" data-i18n="installIOS">Safari → 分享 → 加入主畫面</p>
+      </div>
+      <div class="p-section">
+        <div class="p-section-title">Android</div>
+        <p class="text-sm" data-i18n="installAndroid">Chrome → 選單 → 安裝應用程式</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/api.js"></script>
+<script src="js/map.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

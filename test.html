@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>連接測試</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+  .ok { color: green; font-size: 20px; }
+  .fail { color: red; font-size: 20px; }
+  .info { background: #fff; padding: 15px; border-radius: 8px; margin: 10px 0; }
+  a { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #0D47A1; color: #fff; text-decoration: none; border-radius: 8px; font-size: 18px; }
+</style>
+</head>
+<body>
+<h1>🔌 充電地圖 — 連接測試</h1>
+<div class="info">
+  <p>✅ <strong>成功連接到伺服器！</strong></p>
+  <p>你的裝置 IP: <strong id="ip">...</strong></p>
+  <p>伺服器時間: <strong id="time"></strong></p>
+  <p>頁面大小: <strong id="size"></strong></p>
+</div>
+<div class="info">
+  <p>下一步：點擊下方按鈕開啟 PWA</p>
+  <a href="/">🚀 打開充電地圖</a>
+</div>
+<div class="info">
+  <p><strong>iPhone 安裝方法：</strong></p>
+  <p>Safari → 分享按鈕 (⬆️) → 加入主畫面</p>
+  <p><strong>Android 安裝方法：</strong></p>
+  <p>Chrome → 選單 (⋮) → 安裝應用程式</p>
+</div>
+<script>
+  document.getElementById('time').textContent = new Date().toLocaleString('zh-HK');
+  document.getElementById('size').textContent = document.documentElement.outerHTML.length + ' bytes';
+  fetch('https://api.ipify.org?format=json').then(r=>r.json()).then(d=>{
+    document.getElementById('ip').textContent = d.ip;
+  }).catch(()=>{
+    document.getElementById('ip').textContent = '(無法取得)';
+  });
+</script>
+</body>
+</html>
