@@ -1042,7 +1042,362 @@ const STATIONS = [
     queue: 2, queueConfidence: 'gps',
     historyFailRate: 0.03,
     reports: []
-  }
+  },
+
+﻿  {
+    id: 'st-elements-n', name: { zh: '圓方北停車場', en: 'Elements North Car Park' },
+    region: 'kln', lat: 22.3032, lng: 114.1608,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀柯士甸道西 1 號', en: '1 Austin Rd West, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '2M', en: '2M' }, total: 87, available: 40, stalls: [
+      { connector: 'CCS2', kw: 120, count: 9,  available: 4 },
+      { connector: 'Type2', kw: 22,  count: 78, available: 36 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-cp-elements-n', name: { zh: '充美好圓方北超充站', en: 'ChargePlus Elements North' },
+    region: 'kln', lat: 22.3035, lng: 114.1610,
+    provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀柯士甸道西 1 號圓方北 2M 層', en: '2M/F Elements North, 1 Austin Rd West, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '充電期間免費泊車', en: 'Free parking while charging' },
+    payment: { zh: 'App / 即插即充', en: 'App / Plug & Charge' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '2M', en: '2M' }, total: 83, available: 35, stalls: [
+      { connector: 'CCS2', kw: 250, count: 18, available: 8 },
+      { connector: 'Type2', kw: 22,  count: 65, available: 27 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.01, reports: []
+  },
+
+  {
+    id: 'st-cp-langham', name: { zh: '充美好朗豪坊超充站', en: 'ChargePlus Langham Place Super' },
+    region: 'kln', lat: 22.3185, lng: 114.1695,
+    provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '旺角亞皆老街 8 號朗豪坊 B4 層', en: 'B4/F Langham Place, 8 Argyle St, Mong Kok' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '充電期間免費泊車', en: 'Free parking while charging' },
+    payment: { zh: 'App / 即插即充', en: 'App / Plug & Charge' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B4', en: 'B4' }, total: 12, available: 5, stalls: [
+      { connector: 'CCS2', kw: 250, count: 12, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-elements-s', name: { zh: '圓方南停車場', en: 'Elements South Car Park' },
+    region: 'kln', lat: 22.3028, lng: 114.1615,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀柯士甸道西 1 號', en: '1 Austin Rd West, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '2M', en: '2M' }, total: 22, available: 10, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 16, available: 7 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-harbourcity-tesla', name: { zh: '海運大廈 Tesla', en: 'Ocean Terminal Tesla' },
+    region: 'kln', lat: 22.2960, lng: 114.1688,
+    provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀廣東道 3 至 27 號海運大廈', en: 'Ocean Terminal, 3-27 Canton Rd, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'Tesla App / 即插即充', en: 'Tesla App / Plug & Charge' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '4F', en: '4/F' }, total: 23, available: 10, stalls: [
+      { connector: 'CCS2', kw: 250, count: 4,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 19, available: 8 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-k11', name: { zh: 'K11 人文購物藝術館', en: 'K11 Musea' },
+    region: 'kln', lat: 22.2948, lng: 114.1718,
+    provider: { zh: 'KINETA', en: 'KINETA' }, providerCode: 'KN',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀梳士巴利道 18 號', en: '18 Salisbury Rd, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B4', en: 'B4' }, total: 21, available: 8, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 15, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-olympian', name: { zh: '奧海城一期', en: 'Olympian City Phase 1' },
+    region: 'kln', lat: 22.3168, lng: 114.1588,
+    provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '大角咀海輝道 11 號', en: '11 Hoi Fai Rd, Tai Kok Tsui' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'Tesla App / 即插即充', en: 'Tesla App / Plug & Charge' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '1F', en: '1/F' }, total: 40, available: 18, stalls: [
+      { connector: 'CCS2', kw: 250, count: 7,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 33, available: 15 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-miraplace', name: { zh: 'Mira Place 停車場', en: 'Mira Place Car Park' },
+    region: 'kln', lat: 22.3048, lng: 114.1722,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀彌敦道 132 號', en: '132 Nathan Rd, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B1', en: 'B1' }, total: 25, available: 12, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 21, available: 10 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-chinaport', name: { zh: '中港城', en: 'China Hong Kong City' },
+    region: 'kln', lat: 22.2992, lng: 114.1662,
+    provider: { zh: 'Halo Energy', en: 'Halo Energy' }, providerCode: 'HE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '尖沙咀廣東道 33 號', en: '33 Canton Rd, TST' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'LB', en: 'LB' }, total: 39, available: 15, stalls: [
+      { connector: 'Type2', kw: 22, count: 39, available: 15 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.03, reports: []
+  },
+
+  {
+    id: 'st-hunghom-station', name: { zh: '紅磡站停車場', en: 'Hung Hom Station Car Park' },
+    region: 'kln', lat: 22.3035, lng: 114.1832,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '紅磡暢運道 8 號', en: '8 Cheong Wan Rd, Hung Hom' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 6, available: 3, stalls: [
+      { connector: 'CCS2', kw: 120, count: 1, available: 1 },
+      { connector: 'Type2', kw: 22,  count: 5, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-ntp-plaza', name: { zh: '新城市廣場', en: 'New Town Plaza' },
+    region: 'nt', lat: 22.3812, lng: 114.1865,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田正街 18 號', en: '18 Sha Tin Centre St, Sha Tin' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 20, available: 10, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8,  available: 4 },
+      { connector: 'Type2', kw: 22,  count: 12, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-shatin-centre', name: { zh: '沙田中心停車場', en: 'Shatin Centre Car Park' },
+    region: 'nt', lat: 22.3822, lng: 114.1899,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田正街 2-16 號', en: '2-16 Sha Tin Centre St, Sha Tin' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '2F', en: '2/F' }, total: 15, available: 8, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 9,  available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-tm-plaza', name: { zh: '屯門市廣場', en: 'Tuen Mun Town Plaza' },
+    region: 'nt', lat: 22.3931, lng: 113.9764,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '屯門屯順街 1 號', en: '1 Tuen Shun St, Tuen Mun' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 20, available: 10, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8,  available: 4 },
+      { connector: 'Type2', kw: 22,  count: 12, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-nina-mall', name: { zh: '如心廣場 Nina Mall', en: 'Nina Mall Tsuen Wan' },
+    region: 'nt', lat: 22.3725, lng: 114.1132,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '荃灣楊屋道 8 號', en: '8 Yeung Uk Rd, Tsuen Wan' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'UB', en: 'UB' }, total: 15, available: 7, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 9,  available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-templenorth', name: { zh: 'MCP 新世紀廣場 Moko', en: 'MOKO Mong Kok' },
+    region: 'kln', lat: 22.3225, lng: 114.1715,
+    provider: { zh: 'The Point 特快充電', en: 'The Point' }, providerCode: 'TP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '旺角太子道西 193 號', en: '193 Prince Edward Rd West, Mong Kok' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 6, available: 3, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6, available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-ifc2', name: { zh: 'IFC 商場二期', en: 'IFC Mall Phase 2' },
+    region: 'hk', lat: 22.2855, lng: 114.1588,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '中環金融街 8 號', en: '8 Finance St, Central' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B3', en: 'B3' }, total: 20, available: 8, stalls: [
+      { connector: 'CCS2', kw: 150, count: 8,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 12, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-pacific-place', name: { zh: '太古廣場', en: 'Pacific Place' },
+    region: 'hk', lat: 22.2782, lng: 114.1658,
+    provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
+    ring: 'nodata', unverified: false,
+    address: { zh: '金鐘道 88 號', en: '88 Queensway, Admiralty' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B1', en: 'B1' }, total: 12, available: 5, stalls: [
+      { connector: 'CCS2', kw: 120, count: 5, available: 2 },
+      { connector: 'Type2', kw: 22,  count: 7, available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-tkplaza', name: { zh: '太古城中心', en: 'Cityplaza' },
+    region: 'hk', lat: 22.2872, lng: 114.2178,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '太古城太古灣道 18 號', en: '18 Taikoo Wan Rd, Tai Koo' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 15, available: 7, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6,  available: 3 },
+      { connector: 'Type2', kw: 22,  count: 9,  available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-pacific-plaza', name: { zh: '太古廣場', en: 'Taikoo Shing' },
+    region: 'hk', lat: 22.2865, lng: 114.2162,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '鰂魚涌太古城道 18 號', en: '18 Taikoo Shing Rd, Quarry Bay' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B1', en: 'B1' }, total: 10, available: 5, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 6,  available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-kwai-chung-plaza', name: { zh: '葵涌廣場', en: 'Kwai Chung Plaza' },
+    region: 'nt', lat: 22.3562, lng: 114.1288,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '葵涌葵富路 7-11 號', en: '7-11 Kwai Fu Rd, Kwai Chung' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'L1', en: 'L1' }, total: 10, available: 5, stalls: [
+      { connector: 'CCS2', kw: 120, count: 5,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 5,  available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-citygate', name: { zh: '東薈城 Citygate', en: 'Citygate Outlets' },
+    region: 'nt', lat: 22.2895, lng: 113.9432,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '東涌達東路 20 號', en: '20 Tat Tung Rd, Tung Chung' },
+    parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
+    parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },
+    payment: { zh: '八達通 / App', en: 'Octopus / App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: 'B1', en: 'B1' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4,  available: 2 },
+      { connector: 'Type2', kw: 22,  count: 4,  available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
 ];
 
 /* ---- 計算工具 ---- */

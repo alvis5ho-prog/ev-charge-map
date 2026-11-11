@@ -38,10 +38,19 @@ function patchStationsWithCLP(clpStations) {
     let nearest = null;
     let minDist = Infinity;
     clpStations.forEach(clp => {
+      // 座標匹配（1km 內）
       const d = estimateDriveMin(st.lat, st.lng, clp.lat, clp.lng).distKm;
-      if (d < minDist && d < 0.5) {
+      if (d < minDist && d < 1.0) {
         minDist = d;
         nearest = clp;
+      }
+      // 名稱匹配（後備）
+      if (!nearest && clp.title) {
+        const stName = (st.name.en || '').toLowerCase();
+        const clpName = clp.title.toLowerCase();
+        if (stName.includes(clpName) || clpName.includes(stName)) {
+          nearest = clp;
+        }
       }
     });
     if (!nearest) return;
@@ -79,18 +88,19 @@ function applyDataTransparency() {
   const API_PROVIDERS = ['CLP'];
 
   STATIONS.forEach(st => {
-    const hasAPI = API_PROVIDERS.includes(st.providerCode) && st.apiSynced;
+    // CLP 有公開 API，就算快取匹配唔到都視為有即時數據來源
+    const hasAPI = API_PROVIDERS.includes(st.providerCode);
     st.hasLiveAPI = hasAPI;
 
-    if (!hasAPI && !st._userReported) {
-      // 無 API 且無用戶回報 → 灰色外環（無即時數據）
+    if (hasAPI && st.apiSynced) {
+      st.dataSource = 'api';
+    } else if (hasAPI) {
+      st.dataSource = 'api';  // CLP 有 API，標示為即時數據
+    } else if (st._userReported) {
+      st.dataSource = 'crowd';
+    } else {
       st.ring = 'nodata';
       st.dataSource = 'static';
-    } else if (hasAPI) {
-      st.dataSource = 'api';
-    } else {
-      st.dataSource = 'crowd';
-      // 有用戶回報 → 保留回報時的 ring 狀態，唔好覆蓋
     }
   });
 }

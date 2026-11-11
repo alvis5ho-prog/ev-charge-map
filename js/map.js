@@ -26,7 +26,9 @@ const BRAND_COLORS = {
   'GCSS': '#0097A7',
   'RX':   '#2E7D32',
   'TP':   '#E91E63',
-  'EC':   '#00BCD4'
+  'EC':   '#00BCD4',
+  'KN':   '#795548',
+  'HE':   '#FF5722'
 };
 
 function initMap(lat, lng) {
