@@ -444,10 +444,15 @@ function renderPanel(id) {
     ${st.reports.length > 0 ? `
       <div class="p-section">
         <div class="p-section-title">${t('reports')} (${st.reports.length})</div>
-        ${st.reports.map(r => `
-          <div class="report-item">
+        ${st.reports.map((r, ri) => `
+          <div class="report-item" data-report-idx="${ri}">
             <div class="report-meta">
-              <span class="report-user">@${r.user}</span>
+              <span class="report-user">@${r.user}
+                <span class="prestige-badge" title="威望值">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  ${(r.likes || 0) - (r.dislikes || 0)}
+                </span>
+              </span>
               <span class="report-timestamp">🕐 ${r.at}</span>
               ${r.issueType ? `<span class="report-issue-tag">${issueTypeLabel(r.issueType)}</span>` : ''}
               ${r.verified
@@ -456,10 +461,19 @@ function renderPanel(id) {
                   ? `<span class="report-badge verified">✓ ${r.matchCount} ${t('likes')}</span>`
                   : `<span class="report-badge unverified">${t('verifyUnconfirmed')}</span>`
               }
-              <span class="report-likes">♥ ${r.likes || 0} ${t('likes')}</span>
             </div>
             <div>${r[langKey]}</div>
             ${r.photo ? `<div class="text-xs text-muted mt-1">📷 ${t('photoRequired')}</div>` : ''}
+            <div class="report-actions">
+              <button class="report-action-btn like-btn" data-report-idx="${ri}" data-action="like">
+                <svg viewBox="0 0 24 24" fill="${r.userLiked ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+                <span>${r.likes || 0}</span>
+              </button>
+              <button class="report-action-btn dislike-btn" data-report-idx="${ri}" data-action="dislike">
+                <svg viewBox="0 0 24 24" fill="${r.userDisliked ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M10 15V19a3 3 0 003 3l4-9V2H5.72a2 2 0 00-2 1.7l-1.38 9a2 2 0 002 2.3H10zM17 2h3a2 2 0 012 2v7a2 2 0 01-2 2h-3"/></svg>
+                <span>${r.dislikes || 0}</span>
+              </button>
+            </div>
           </div>
         `).join('')}
       </div>
@@ -485,6 +499,15 @@ function renderPanel(id) {
   if (favBtn) {
     favBtn.addEventListener('click', () => toggleFav(id));
   }
+
+  // like/dislike buttons
+  body.querySelectorAll('.report-action-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-report-idx'));
+      const action = btn.getAttribute('data-action');
+      handleReportVote(st, idx, action);
+    });
+  });
 
   // Apple Maps link also
   const googleLink = body.querySelector('a[href*="google"]');
@@ -516,6 +539,39 @@ function toggleFav(id) {
   else APP_STATE.favorites.push(id);
   localStorage.setItem('ev-fav', JSON.stringify(APP_STATE.favorites));
   if (APP_STATE.selectedStationId === id) renderPanel(id);
+}
+
+function handleReportVote(station, reportIdx, action) {
+  const report = station.reports[reportIdx];
+  if (!report) return;
+
+  if (action === 'like') {
+    if (report.userLiked) {
+      report.likes = Math.max(0, (report.likes || 0) - 1);
+      report.userLiked = false;
+    } else {
+      report.likes = (report.likes || 0) + 1;
+      report.userLiked = true;
+      if (report.userDisliked) {
+        report.dislikes = Math.max(0, (report.dislikes || 0) - 1);
+        report.userDisliked = false;
+      }
+    }
+  } else if (action === 'dislike') {
+    if (report.userDisliked) {
+      report.dislikes = Math.max(0, (report.dislikes || 0) - 1);
+      report.userDisliked = false;
+    } else {
+      report.dislikes = (report.dislikes || 0) + 1;
+      report.userDisliked = true;
+      if (report.userLiked) {
+        report.likes = Math.max(0, (report.likes || 0) - 1);
+        report.userLiked = false;
+      }
+    }
+  }
+
+  renderPanel(station.id);
 }
 
 /* ---------- List panel ---------- */
@@ -763,6 +819,10 @@ function setupReportHandlers() {
   // Photo upload
   const photoZone = document.getElementById('photoUploadZone');
   const photoInput = document.getElementById('photoInput');
+  const photoPrompt = document.getElementById('photoUploadPrompt');
+
+  // 點擊提示區或預覽區都可以觸發上載
+  photoPrompt.addEventListener('click', () => photoInput.click());
   photoZone.addEventListener('click', (e) => {
     if (e.target === photoInput || e.target.closest('.photo-remove-btn')) return;
     photoInput.click();

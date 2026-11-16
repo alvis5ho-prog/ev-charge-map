@@ -232,7 +232,7 @@ ul { list-style: none; }
 /* ====== Station markers ====== */
 .station-marker {
   position: relative;
-  width: 36px; height: 36px;
+  width: 100%; height: 100%;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -241,7 +241,7 @@ ul { list-style: none; }
   position: absolute; inset: 5px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 9px; font-weight: 700; color: #fff;
+  font-weight: 700; color: #fff;
   letter-spacing: -0.02em;
 }
 .station-marker .ring {
@@ -1158,6 +1158,60 @@ ul { list-style: none; }
   padding: var(--sp-3);
   color: var(--accent);
   font-size: var(--fs-sm);
+}
+
+/* ====== Prestige badge ====== */
+.prestige-badge {
+  display: inline-flex; align-items: center; gap: 2px;
+  padding: 1px 5px;
+  border-radius: var(--r-full);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  margin-left: 4px;
+}
+[data-theme="dark"] .prestige-badge {
+  background: #1E3A5F;
+  color: #60A5FA;
+}
+
+/* ====== Report action buttons ====== */
+.report-actions {
+  display: flex; gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+.report-action-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink-secondary);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.report-action-btn:hover, .report-action-btn:active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.report-action-btn.like-btn:hover {
+  border-color: var(--success);
+  color: var(--success);
+  background: #DCFCE7;
+}
+.report-action-btn.dislike-btn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: #FEE2E2;
+}
+[data-theme="dark"] .report-action-btn.like-btn:hover {
+  background: #064E3B;
+}
+[data-theme="dark"] .report-action-btn.dislike-btn:hover {
+  background: #450A0A;
 }
 
 /* ====== Data transparency note ====== */

@@ -191,16 +191,19 @@ function createStationIcon(st, zoom) {
     });
   }
 
-  // 總覽：填充色 = 空位狀況，中間顯示可用數
+  // 總覽：填充色 = 空位狀況，大小正比於充電樁數目，中間顯示可用數
   const availLabel = totals.total > 0 ? `${totals.available}` : '·';
+  // 大小正比於充電樁數：最少 36px，最多 56px
+  const sizeScale = Math.min(56, Math.max(36, 30 + totals.total * 0.4));
+  const half = sizeScale / 2;
   return L.divIcon({
     className: '',
-    iconSize: [36, 36],
-    iconAnchor: [18, 18],
+    iconSize: [sizeScale, sizeScale],
+    iconAnchor: [half, half],
     html: `
-      <div class="station-marker" title="${st.name.zh || st.name.en}">
+      <div class="station-marker" style="width:${sizeScale}px;height:${sizeScale}px" title="${st.name.zh || st.name.en}">
         <div class="ring ${ringClass}" style="${ringStyle}"></div>
-        <div class="fill" style="background:${availColor}">${availLabel}</div>
+        <div class="fill" style="background:${availColor};font-size:${sizeScale > 44 ? 11 : 10}px">${availLabel}</div>
         ${noLiveBadge}${crowdBadge}
       </div>`
   });
