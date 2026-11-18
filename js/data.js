@@ -48,7 +48,7 @@ const EV_MODELS = [
 const STATIONS = [
   {
     id: 'st-cwb-1', name: { zh: '時代廣場停車場', en: 'Times Square Car Park' },
-    region: 'hk', lat: 22.2782, lng: 114.1823,
+    region: 'hk', lat: 22.278059, lng: 114.183155,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '銅鑼灣勿地臣街 1 號', en: '1 Matheson St, Causeway Bay' },
@@ -73,7 +73,7 @@ const STATIONS = [
   },
   {
     id: 'st-ic-1', name: { zh: 'IFC 商場充電站', en: 'IFC Mall Charging Hub' },
-    region: 'hk', lat: 22.2850, lng: 114.1585,
+    region: 'hk', lat: 22.284694, lng: 114.158893,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '中環金融街 8 號', en: '8 Finance St, Central' },
@@ -134,7 +134,7 @@ const STATIONS = [
   },
   {
     id: 'st-tst-1', name: { zh: '海港城停車場', en: 'Harbour City Car Park' },
-    region: 'kln', lat: 22.2958, lng: 114.1688,
+    region: 'kln', lat: 22.295178, lng: 114.169767,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀廣東道 3–27 號', en: '3–27 Canton Road, TST' },
@@ -158,7 +158,7 @@ const STATIONS = [
   },
   {
     id: 'st-mk-1', name: { zh: '朗豪坊停車場', en: 'Langham Place Car Park' },
-    region: 'kln', lat: 22.3178, lng: 114.1688,
+    region: 'kln', lat: 22.318057, lng: 114.168765,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '旺角亞皆老街 8 號', en: '8 Argyle Street, Mong Kok' },
@@ -178,7 +178,7 @@ const STATIONS = [
   },
   {
     id: 'st-kc-1', name: { zh: '葵涌廣場充電站', en: 'Kwai Chung Plaza Charging' },
-    region: 'kln', lat: 22.3562, lng: 114.1288,
+    region: 'kln', lat: 22.355274, lng: 114.129798,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '葵涌葵富路 7–11 號', en: '7–11 Kwai Fu Rd, Kwai Chung' },
@@ -219,7 +219,7 @@ const STATIONS = [
   },
   {
     id: 'st-sp-1', name: { zh: '科學園停車場', en: 'Science Park Car Park' },
-    region: 'nt', lat: 22.4188, lng: 114.2092,
+    region: 'nt', lat: 22.423566, lng: 114.210405,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田白石角科學園', en: 'Science Park, Pak Shek Kok, Sha Tin' },
@@ -240,7 +240,7 @@ const STATIONS = [
   },
   {
     id: 'st-st-1', name: { zh: '新城市廣場停車場', en: 'New Town Plaza Car Park' },
-    region: 'nt', lat: 22.3812, lng: 114.1865,
+    region: 'nt', lat: 22.381836, lng: 114.186722,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田正街 18 號', en: '18 Sha Tin Centre St, Sha Tin' },
@@ -264,7 +264,7 @@ const STATIONS = [
   },
   {
     id: 'st-tp-1', name: { zh: '大埔超級城停車場', en: 'Tai Po Mega Mall Car Park' },
-    region: 'nt', lat: 22.4502, lng: 114.1642,
+    region: 'nt', lat: 22.449698, lng: 114.164718,
     provider: { zh: 'HK Electric', en: 'HK Electric' }, providerCode: 'HKE',
     ring: 'nodata', unverified: false,
     address: { zh: '大埔安邦路 8 號', en: '8 On Pong Rd, Tai Po' },
@@ -284,7 +284,7 @@ const STATIONS = [
   },
   {
     id: 'st-tm-1', name: { zh: '屯門市廣場停車場', en: 'Tuen Mun Town Plaza Car Park' },
-    region: 'nt', lat: 22.3925, lng: 113.9752,
+    region: 'nt', lat: 22.39312, lng: 113.977335,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '屯門屯順街 1 號', en: '1 Tuen Shun St, Tuen Mun' },
@@ -305,7 +305,7 @@ const STATIONS = [
   },
   {
     id: 'st-tc-1', name: { zh: '東薈城停車場', en: 'Citygate Outlets Car Park' },
-    region: 'nt', lat: 22.2892, lng: 113.9402,
+    region: 'nt', lat: 22.289974, lng: 113.942315,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '大嶼山達東路 20 號', en: '20 Tat Tung Rd, Tung Chung' },
@@ -325,7 +325,7 @@ const STATIONS = [
   },
   {
     id: 'st-cp-1', name: { zh: '數碼港停車場', en: 'Cyberport Car Park' },
-    region: 'hk', lat: 22.2298, lng: 114.1282,
+    region: 'hk', lat: 22.228899, lng: 114.127895,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: true,
     address: { zh: '鋼綫灣數碼港道 100 號', en: '100 Cyberport Rd, Telegraph Bay' },
@@ -345,7 +345,7 @@ const STATIONS = [
   },
   {
     id: 'st-rb-1', name: { zh: '淺水灣停車場', en: 'Repulse Bay Car Park' },
-    region: 'hk', lat: 22.2372, lng: 114.1912,
+    region: 'hk', lat: 22.236945, lng: 114.191444,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '淺水灣海灘道 109 號', en: '109 Repulse Bay Beach Rd' },
@@ -365,7 +365,7 @@ const STATIONS = [
   },
   {
     id: 'st-ap-1', name: { zh: '機場一號停車場', en: 'Airport Terminal 1 Car Park' },
-    region: 'nt', lat: 22.3082, lng: 113.9168,
+    region: 'nt', lat: 22.308231, lng: 113.917783,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '赤鱲角機場路一號客運大樓', en: 'Terminal 1, Airport Rd, Chek Lap Kok' },
@@ -386,7 +386,7 @@ const STATIONS = [
   },
   {
     id: 'st-stan-1', name: { zh: '赤柱停車場', en: 'Stanley Car Park' },
-    region: 'hk', lat: 22.2182, lng: 114.2125,
+    region: 'hk', lat: 22.217967, lng: 114.213472,
     provider: { zh: 'HK Electric', en: 'HK Electric' }, providerCode: 'HKE',
     ring: 'nodata', unverified: true,
     address: { zh: '赤柱赤柱大街', en: 'Stanley Main St, Stanley' },
@@ -430,7 +430,7 @@ const STATIONS = [
   },
   {
     id: 'st-lcb-1', name: { zh: '藍田匯景廣場', en: 'Laguna Plaza, Lam Tin' },
-    region: 'kln', lat: 22.3072, lng: 114.2282,
+    region: 'kln', lat: 22.306591, lng: 114.228046,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '藍田匯景道 8 號', en: '8 Laguna Verde, Lam Tin' },
@@ -450,7 +450,7 @@ const STATIONS = [
   },
   {
     id: 'st-sk-1', name: { zh: '西貢停車場', en: 'Sai Kung Car Park' },
-    region: 'nt', lat: 22.3832, lng: 114.2688,
+    region: 'nt', lat: 22.383292, lng: 114.268258,
     provider: { zh: 'HK Electric', en: 'HK Electric' }, providerCode: 'HKE',
     ring: 'nodata', unverified: true,
     address: { zh: '西貢親民街', en: 'Chan Man St, Sai Kung' },
@@ -470,7 +470,7 @@ const STATIONS = [
   },
   {
     id: 'st-tsy-1', name: { zh: '青衣城停車場', en: 'Tsing Yi Plaza Car Park' },
-    region: 'nt', lat: 22.3552, lng: 114.1082,
+    region: 'nt', lat: 22.354237, lng: 114.108511,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '青衣青敬路 33 號', en: '33 Tsing King Rd, Tsing Yi' },
@@ -490,7 +490,7 @@ const STATIONS = [
   },
   {
     id: 'st-sy-1', name: { zh: '將軍廣場停車場', en: 'TKO Gateway Car Park' },
-    region: 'nt', lat: 22.3072, lng: 114.2562,
+    region: 'nt', lat: 22.312123, lng: 114.255167,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳唐德街 9 號', en: '9 Tong Tak St, Tseung Kwan O' },
@@ -532,7 +532,7 @@ const STATIONS = [
   /* ===== 觀塘區（EV-BOY 2026-11 資料） ===== */
   {
     id: 'st-dtf2', name: { zh: '德福廣場二期', en: 'Telford Plaza Phase 2' },
-    region: 'kln', lat: 22.3226, lng: 114.2136,
+    region: 'kln', lat: 22.323529, lng: 114.212707,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣偉業街 33 號', en: '33 Wai Yip St, Kowloon Bay' },
@@ -552,7 +552,7 @@ const STATIONS = [
   },
   {
     id: 'st-cmh-dtf2', name: { zh: '充美好德福廣場 2 期超充站', en: 'ChargePlus Telford Plaza 2 Super' },
-    region: 'kln', lat: 22.3228, lng: 114.2134,
+    region: 'kln', lat: 22.322747, lng: 114.214027,
     provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣偉業街 33 號德福廣場 2 期停車場', en: 'Telford Plaza 2 Car Park, 33 Wai Yip St, Kowloon Bay' },
@@ -689,7 +689,7 @@ const STATIONS = [
   },
   {
     id: 'st-hungto-gcss', name: { zh: '觀塘鴻圖道威德超充', en: 'Wai Tak Super, Hung To Rd' },
-    region: 'kln', lat: 22.3142, lng: 114.2218,
+    region: 'kln', lat: 22.312599, lng: 114.225902,
     provider: { zh: 'GCSS 全港充', en: 'GCSS' }, providerCode: 'GCSS',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘鴻圖道 8 號樂居工業大廈 G/F', en: 'G/F, Lok Kui Industrial Bldg, 8 Hung To Rd, Kwun Tong' },
@@ -811,7 +811,7 @@ const STATIONS = [
   /* ===== 將軍澳 / 西貢區（EV-BOY 2026-11 資料） ===== */
   {
     id: 'st-choiming2', name: { zh: '彩明 2 號停車場', en: 'Choi Ming Car Park 2' },
-    region: 'nt', lat: 22.3050, lng: 114.2550,
+    region: 'nt', lat: 22.382222, lng: 114.269342,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '調景嶺彩明街 1 號彩明商場', en: 'Choi Ming Shopping Centre, 1 Choi Ming St, Tiu Keng Leng' },
@@ -827,7 +827,7 @@ const STATIONS = [
   },
   {
     id: 'st-lohas', name: { zh: 'The LOHAS 康城', en: 'The LOHAS LOHAS Park' },
-    region: 'nt', lat: 22.2970, lng: 114.2700,
+    region: 'nt', lat: 22.29758, lng: 114.270067,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳康城路 1 號', en: '1 LOHAS Rd, Tseung Kwan O' },
@@ -843,7 +843,7 @@ const STATIONS = [
   },
   {
     id: 'st-cp-lohas', name: { zh: '充美好康城超充站', en: 'ChargePlus LOHAS Super' },
-    region: 'nt', lat: 22.2975, lng: 114.2705,
+    region: 'nt', lat: 22.296549, lng: 114.270801,
     provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳康城路 1 號康城停車場', en: 'LOHAS Park Car Park, 1 LOHAS Rd, Tseung Kwan O' },
@@ -859,7 +859,7 @@ const STATIONS = [
   },
   {
     id: 'st-tko-gateway-e', name: { zh: 'TKO Gateway 東翼', en: 'TKO Gateway East Wing' },
-    region: 'nt', lat: 22.3130, lng: 114.2550,
+    region: 'nt', lat: 22.31336, lng: 114.254623,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳常寧路 2 號 TKO Gateway 東翼 4 樓', en: '4/F, TKO Gateway East, 2 Sheung Ning Rd, TKO' },
@@ -875,7 +875,7 @@ const STATIONS = [
   },
   {
     id: 'st-tko-centre', name: { zh: '將軍澳中心', en: 'Park Central TKO' },
-    region: 'nt', lat: 22.3100, lng: 114.2570,
+    region: 'nt', lat: 22.309365, lng: 114.257539,
     provider: { zh: 'Tesla（品牌專用）', en: 'Tesla (Brand Only)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳唐德街 9 號', en: '9 Tong Tak St, Tseung Kwan O' },
@@ -891,7 +891,7 @@ const STATIONS = [
   },
   {
     id: 'st-east-point', name: { zh: '東港城 East Point City', en: 'East Point City' },
-    region: 'nt', lat: 22.3150, lng: 114.2600,
+    region: 'nt', lat: 22.314461, lng: 114.259983,
     provider: { zh: 'The Point 特快充電', en: 'The Point' }, providerCode: 'TP',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳重華路 8 號', en: '8 Chung Wa Rd, Tseung Kwan O' },
@@ -906,7 +906,7 @@ const STATIONS = [
   },
   {
     id: 'st-tko-spot-tesla', name: { zh: 'TKO Spot Tesla', en: 'TKO Spot Tesla' },
-    region: 'nt', lat: 22.3115, lng: 114.2580,
+    region: 'nt', lat: 22.310709, lng: 114.257106,
     provider: { zh: 'Tesla（品牌專用）', en: 'Tesla (Brand Only)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳唐明街 2 號', en: '2 Tong Ming St, Tseung Kwan O' },
@@ -969,7 +969,7 @@ const STATIONS = [
   },
   {
     id: 'st-tko-sport', name: { zh: '將軍澳運動場', en: 'TKO Sports Ground' },
-    region: 'nt', lat: 22.3085, lng: 114.2590,
+    region: 'nt', lat: 22.309526, lng: 114.257808,
     provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳寶康路', en: 'Po Hong Rd, Tseung Kwan O' },
@@ -985,7 +985,7 @@ const STATIONS = [
   },
   {
     id: 'st-popcorn', name: { zh: 'PopCorn 一二期', en: 'PopCorn 1 & 2' },
-    region: 'nt', lat: 22.3105, lng: 114.2595,
+    region: 'nt', lat: 22.31011, lng: 114.26021,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳唐賢街 9 號', en: '9 Tong Yin St, Tseung Kwan O' },
@@ -1001,7 +1001,7 @@ const STATIONS = [
   },
   {
     id: 'st-tmt-1', name: { zh: '屯門公路休息區', en: 'Tuen Mun Rd Rest Area' },
-    region: 'nt', lat: 22.3782, lng: 114.0182,
+    region: 'nt', lat: 22.392317, lng: 113.975888,
     provider: { zh: 'CLP', en: 'CLP' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '屯門公路近深井', en: 'Tuen Mun Rd near Sham Tseng' },
@@ -1021,7 +1021,7 @@ const STATIONS = [
   },
   {
     id: 'st-kln-1', name: { zh: '又一城停車場', en: 'Festival Walk Car Park' },
-    region: 'kln', lat: 22.3372, lng: 114.1728,
+    region: 'kln', lat: 22.337082, lng: 114.173268,
     provider: { zh: 'Tesla', en: 'Tesla' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍塘達之路 80 號', en: '80 Tat Chee Ave, Kowloon Tong' },
@@ -1046,7 +1046,7 @@ const STATIONS = [
 
 ﻿  {
     id: 'st-elements-n', name: { zh: '圓方北停車場', en: 'Elements North Car Park' },
-    region: 'kln', lat: 22.3032, lng: 114.1608,
+    region: 'kln', lat: 22.303258, lng: 114.160097,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀柯士甸道西 1 號', en: '1 Austin Rd West, TST' },
@@ -1063,7 +1063,7 @@ const STATIONS = [
 
   {
     id: 'st-cp-elements-n', name: { zh: '充美好圓方北超充站', en: 'ChargePlus Elements North' },
-    region: 'kln', lat: 22.3035, lng: 114.1610,
+    region: 'kln', lat: 22.303252, lng: 114.159954,
     provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀柯士甸道西 1 號圓方北 2M 層', en: '2M/F Elements North, 1 Austin Rd West, TST' },
@@ -1080,7 +1080,7 @@ const STATIONS = [
 
   {
     id: 'st-cp-langham', name: { zh: '充美好朗豪坊超充站', en: 'ChargePlus Langham Place Super' },
-    region: 'kln', lat: 22.3185, lng: 114.1695,
+    region: 'kln', lat: 22.318141, lng: 114.169492,
     provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
     ring: 'nodata', unverified: false,
     address: { zh: '旺角亞皆老街 8 號朗豪坊 B4 層', en: 'B4/F Langham Place, 8 Argyle St, Mong Kok' },
@@ -1096,7 +1096,7 @@ const STATIONS = [
 
   {
     id: 'st-elements-s', name: { zh: '圓方南停車場', en: 'Elements South Car Park' },
-    region: 'kln', lat: 22.3028, lng: 114.1615,
+    region: 'kln', lat: 22.302558, lng: 114.161197,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀柯士甸道西 1 號', en: '1 Austin Rd West, TST' },
@@ -1130,7 +1130,7 @@ const STATIONS = [
 
   {
     id: 'st-k11', name: { zh: 'K11 人文購物藝術館', en: 'K11 Musea' },
-    region: 'kln', lat: 22.2948, lng: 114.1718,
+    region: 'kln', lat: 22.295425, lng: 114.172011,
     provider: { zh: 'KINETA', en: 'KINETA' }, providerCode: 'KN',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀梳士巴利道 18 號', en: '18 Salisbury Rd, TST' },
@@ -1147,7 +1147,7 @@ const STATIONS = [
 
   {
     id: 'st-olympian', name: { zh: '奧海城一期', en: 'Olympian City Phase 1' },
-    region: 'kln', lat: 22.3168, lng: 114.1588,
+    region: 'kln', lat: 22.316165, lng: 114.159208,
     provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '大角咀海輝道 11 號', en: '11 Hoi Fai Rd, Tai Kok Tsui' },
@@ -1164,7 +1164,7 @@ const STATIONS = [
 
   {
     id: 'st-miraplace', name: { zh: 'Mira Place 停車場', en: 'Mira Place Car Park' },
-    region: 'kln', lat: 22.3048, lng: 114.1722,
+    region: 'kln', lat: 22.304606, lng: 114.172193,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀彌敦道 132 號', en: '132 Nathan Rd, TST' },
@@ -1181,7 +1181,7 @@ const STATIONS = [
 
   {
     id: 'st-chinaport', name: { zh: '中港城', en: 'China Hong Kong City' },
-    region: 'kln', lat: 22.2992, lng: 114.1662,
+    region: 'kln', lat: 22.2985, lng: 114.167131,
     provider: { zh: 'Halo Energy', en: 'Halo Energy' }, providerCode: 'HE',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀廣東道 33 號', en: '33 Canton Rd, TST' },
@@ -1197,7 +1197,7 @@ const STATIONS = [
 
   {
     id: 'st-hunghom-station', name: { zh: '紅磡站停車場', en: 'Hung Hom Station Car Park' },
-    region: 'kln', lat: 22.3035, lng: 114.1832,
+    region: 'kln', lat: 22.303927, lng: 114.183021,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '紅磡暢運道 8 號', en: '8 Cheong Wan Rd, Hung Hom' },
@@ -1214,7 +1214,7 @@ const STATIONS = [
 
   {
     id: 'st-ntp-plaza', name: { zh: '新城市廣場', en: 'New Town Plaza' },
-    region: 'nt', lat: 22.3812, lng: 114.1865,
+    region: 'nt', lat: 22.381168, lng: 114.186678,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田正街 18 號', en: '18 Sha Tin Centre St, Sha Tin' },
@@ -1231,7 +1231,7 @@ const STATIONS = [
 
   {
     id: 'st-shatin-centre', name: { zh: '沙田中心停車場', en: 'Shatin Centre Car Park' },
-    region: 'nt', lat: 22.3822, lng: 114.1899,
+    region: 'nt', lat: 22.381793, lng: 114.189867,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田正街 2-16 號', en: '2-16 Sha Tin Centre St, Sha Tin' },
@@ -1248,7 +1248,7 @@ const STATIONS = [
 
   {
     id: 'st-tm-plaza', name: { zh: '屯門市廣場', en: 'Tuen Mun Town Plaza' },
-    region: 'nt', lat: 22.3931, lng: 113.9764,
+    region: 'nt', lat: 22.392504, lng: 113.976878,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '屯門屯順街 1 號', en: '1 Tuen Shun St, Tuen Mun' },
@@ -1265,7 +1265,7 @@ const STATIONS = [
 
   {
     id: 'st-nina-mall', name: { zh: '如心廣場 Nina Mall', en: 'Nina Mall Tsuen Wan' },
-    region: 'nt', lat: 22.3725, lng: 114.1132,
+    region: 'nt', lat: 22.372943, lng: 114.114021,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '荃灣楊屋道 8 號', en: '8 Yeung Uk Rd, Tsuen Wan' },
@@ -1282,7 +1282,7 @@ const STATIONS = [
 
   {
     id: 'st-templenorth', name: { zh: 'MCP 新世紀廣場 Moko', en: 'MOKO Mong Kok' },
-    region: 'kln', lat: 22.3225, lng: 114.1715,
+    region: 'kln', lat: 22.322423, lng: 114.171259,
     provider: { zh: 'The Point 特快充電', en: 'The Point' }, providerCode: 'TP',
     ring: 'nodata', unverified: false,
     address: { zh: '旺角太子道西 193 號', en: '193 Prince Edward Rd West, Mong Kok' },
@@ -1298,7 +1298,7 @@ const STATIONS = [
 
   {
     id: 'st-ifc2', name: { zh: 'IFC 商場二期', en: 'IFC Mall Phase 2' },
-    region: 'hk', lat: 22.2855, lng: 114.1588,
+    region: 'hk', lat: 22.28442, lng: 114.159294,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '中環金融街 8 號', en: '8 Finance St, Central' },
@@ -1315,7 +1315,7 @@ const STATIONS = [
 
   {
     id: 'st-pacific-place', name: { zh: '太古廣場', en: 'Pacific Place' },
-    region: 'hk', lat: 22.2782, lng: 114.1658,
+    region: 'hk', lat: 22.278953, lng: 114.165977,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '金鐘道 88 號', en: '88 Queensway, Admiralty' },
@@ -1332,7 +1332,7 @@ const STATIONS = [
 
   {
     id: 'st-tkplaza', name: { zh: '太古城中心', en: 'Cityplaza' },
-    region: 'hk', lat: 22.2872, lng: 114.2178,
+    region: 'hk', lat: 22.287558, lng: 114.218622,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '太古城太古灣道 18 號', en: '18 Taikoo Wan Rd, Tai Koo' },
@@ -1349,7 +1349,7 @@ const STATIONS = [
 
   {
     id: 'st-pacific-plaza', name: { zh: '太古廣場', en: 'Taikoo Shing' },
-    region: 'hk', lat: 22.2865, lng: 114.2162,
+    region: 'hk', lat: 22.278653, lng: 114.165098,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '鰂魚涌太古城道 18 號', en: '18 Taikoo Shing Rd, Quarry Bay' },
@@ -1366,7 +1366,7 @@ const STATIONS = [
 
   {
     id: 'st-kwai-chung-plaza', name: { zh: '葵涌廣場', en: 'Kwai Chung Plaza' },
-    region: 'nt', lat: 22.3562, lng: 114.1288,
+    region: 'nt', lat: 22.356385, lng: 114.129315,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '葵涌葵富路 7-11 號', en: '7-11 Kwai Fu Rd, Kwai Chung' },
@@ -1383,7 +1383,7 @@ const STATIONS = [
 
   {
     id: 'st-citygate', name: { zh: '東薈城 Citygate', en: 'Citygate Outlets' },
-    region: 'nt', lat: 22.2895, lng: 113.9432,
+    region: 'nt', lat: 22.289958, lng: 113.9427,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '東涌達東路 20 號', en: '20 Tat Tung Rd, Tung Chung' },
@@ -1400,7 +1400,7 @@ const STATIONS = [
 
 ﻿  {
     id: 'st-hyatt-shatin', name: { zh: '沙田凱悅酒店', en: 'Hyatt Regency Sha Tin' },
-    region: 'nt', lat: 22.4185, lng: 114.2135,
+    region: 'nt', lat: 22.418932, lng: 114.213254,
     provider: { zh: 'Tesla (全 EV 開放)', en: 'Tesla (全 EV 開放)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田澤祥街 18 號', en: '18 Chak Cheung St, Sha Tin' },
@@ -1434,7 +1434,7 @@ const STATIONS = [
 
   {
     id: 'st-pit-fotan', name: { zh: 'PIT Ultra 火炭', en: 'PIT Ultra Fo Tan' },
-    region: 'nt', lat: 22.3955, lng: 114.1985,
+    region: 'nt', lat: 22.395723, lng: 114.197952,
     provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
     ring: 'nodata', unverified: false,
     address: { zh: '火炭山尾街 34A 號', en: '34A Shan Mei St, Fo Tan' },
@@ -1500,7 +1500,7 @@ const STATIONS = [
 
   {
     id: 'st-cuahk', name: { zh: '香港中文大學醫院', en: 'CUHK Medical Centre' },
-    region: 'nt', lat: 22.4168, lng: 114.2125,
+    region: 'nt', lat: 22.417102, lng: 114.212806,
     provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田澤祥街 9 號', en: '9 Chak Cheung St, Sha Tin' },
@@ -1516,7 +1516,7 @@ const STATIONS = [
 
   {
     id: 'st-stgov', name: { zh: '沙田政府合署', en: 'Sha Tin Govt Offices' },
-    region: 'nt', lat: 22.3835, lng: 114.1912,
+    region: 'nt', lat: 22.381273, lng: 114.186335,
     provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
     ring: 'nodata', unverified: false,
     address: { zh: '上禾輋路 1 號', en: '1 Sheung Wo Che Rd, Sha Tin' },
@@ -1532,7 +1532,7 @@ const STATIONS = [
 
   {
     id: 'st-wai-fong', name: { zh: '圍方', en: 'The Wai' },
-    region: 'nt', lat: 22.3735, lng: 114.1782,
+    region: 'nt', lat: 22.374065, lng: 114.178615,
     provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '大圍車公廟路 18 號', en: '18 Che Kung Temple Rd, Tai Wai' },
@@ -1548,7 +1548,7 @@ const STATIONS = [
 
   {
     id: 'st-kwong-yuen', name: { zh: '沙田廣源 A 停車場', en: 'Kwong Yuen Car Park A' },
-    region: 'nt', lat: 22.3812, lng: 114.2002,
+    region: 'nt', lat: 22.381624, lng: 114.1994,
     provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
     ring: 'nodata', unverified: false,
     address: { zh: '廣源邨 1 號停車場', en: 'Kwong Yuen Estate Car Park 1' },
@@ -1581,7 +1581,7 @@ const STATIONS = [
 
   {
     id: 'st-shatin-centre2', name: { zh: '沙田中心停車場', en: 'Shatin Centre Car Park' },
-    region: 'nt', lat: 22.3822, lng: 114.1899,
+    region: 'nt', lat: 22.382743, lng: 114.190438,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '沙田橫壆街 2-16 號', en: '2-16 Wang Pok St, Sha Tin' },
@@ -1598,7 +1598,7 @@ const STATIONS = [
 
   {
     id: 'st-fotan-fast', name: { zh: '火炭穗禾路小馬快充', en: 'Fo Tan Fast Charge' },
-    region: 'nt', lat: 22.3942, lng: 114.1992,
+    region: 'nt', lat: 22.395415, lng: 114.197983,
     provider: { zh: 'GCSS 全港充', en: 'GCSS 全港充' }, providerCode: 'GCSS',
     ring: 'nodata', unverified: false,
     address: { zh: '火炭何瀝背街 1 號', en: '1 Wo Loi Pai St, Fo Tan' },
@@ -1614,7 +1614,7 @@ const STATIONS = [
 
   {
     id: 'st-maonshan-plaza', name: { zh: '馬鞍山廣場', en: 'Ma On Shan Plaza' },
-    region: 'nt', lat: 22.4268, lng: 114.2312,
+    region: 'nt', lat: 22.426747, lng: 114.231279,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '馬鞍山西沙路 608 號', en: '608 Sai Sha Rd, Ma On Shan' },
@@ -1631,7 +1631,7 @@ const STATIONS = [
 
   {
     id: 'st-sciencepk2', name: { zh: '香港科學園二期', en: 'Science Park Phase 2' },
-    region: 'nt', lat: 22.4245, lng: 114.2102,
+    region: 'nt', lat: 22.424298, lng: 114.209624,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '科學園科技大道西 8-10 號', en: '8-10 Science Park West Ave' },
@@ -1648,7 +1648,7 @@ const STATIONS = [
 
 ﻿  {
     id: 'st-kamsheung', name: { zh: '錦上路車站停車場', en: 'Kam Sheung Rd Station Car Park' },
-    region: 'nt', lat: 22.4322, lng: 114.0642,
+    region: 'nt', lat: 22.43306, lng: 114.06455,
     provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '錦田錦河路 29 號', en: '29 Kam Ho Rd, Kam Tin' },
@@ -1699,7 +1699,7 @@ const STATIONS = [
 
   {
     id: 'st-yoho-mall', name: { zh: '形點 YOHO MALL', en: 'YOHO MALL Yuen Long' },
-    region: 'nt', lat: 22.4455, lng: 114.0325,
+    region: 'nt', lat: 22.446273, lng: 114.033159,
     provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '元朗元龍街 9 號', en: '9 Yuen Lung St, Yuen Long' },
@@ -1732,7 +1732,7 @@ const STATIONS = [
 
   {
     id: 'st-ttown-s', name: { zh: '天水圍 T Town South', en: 'T Town South Tin Shui Wai' },
-    region: 'nt', lat: 22.4428, lng: 114.0022,
+    region: 'nt', lat: 22.443483, lng: 114.001924,
     provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
     ring: 'nodata', unverified: false,
     address: { zh: '天水圍天華路 30-33 號', en: '30-33 Tin Wah Rd, TSW' },
@@ -1765,7 +1765,7 @@ const STATIONS = [
 
   {
     id: 'st-yuenlong-e', name: { zh: '元朗東成里', en: 'Yuen Long Tung Sing Lei' },
-    region: 'nt', lat: 22.4418, lng: 114.0335,
+    region: 'nt', lat: 22.443949, lng: 114.030974,
     provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
     ring: 'nodata', unverified: false,
     address: { zh: '元朗東成里 132 號', en: '132 Tung Sing Lei, YL' },
@@ -1797,7 +1797,7 @@ const STATIONS = [
 
   {
     id: 'st-kinsang', name: { zh: '元朗千色匯', en: 'Yuen Long colours' },
-    region: 'nt', lat: 22.4435, lng: 114.0312,
+    region: 'nt', lat: 22.442882, lng: 114.031957,
     provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
     ring: 'nodata', unverified: false,
     address: { zh: '元朗教育路 1 號', en: '1 Kau Yuk Rd, YL' },
@@ -1814,7 +1814,7 @@ const STATIONS = [
 
   {
     id: 'st-pak-wai', name: { zh: '天水圍栢慧', en: 'Pak Wai Tin Shui Wai' },
-    region: 'nt', lat: 22.4482, lng: 114.0018,
+    region: 'nt', lat: 22.445322, lng: 114.002555,
     provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
     ring: 'nodata', unverified: false,
     address: { zh: '天水圍天恩路 2 號', en: '2 Tin Yan Rd, TSW' },
@@ -1848,7 +1848,7 @@ const STATIONS = [
 
   {
     id: 'st-yoho-plus', name: { zh: 'YOHO Plus', en: 'YOHO Plus Yuen Long' },
-    region: 'nt', lat: 22.4458, lng: 114.0328,
+    region: 'nt', lat: 22.44578, lng: 114.032183,
     provider: { zh: 'The Point 特快充電', en: 'The Point 特快充電' }, providerCode: 'TP',
     ring: 'nodata', unverified: false,
     address: { zh: '元朗朗日路 8-9 號', en: '8-9 Long Yat Rd, YL' },
@@ -1881,7 +1881,7 @@ const STATIONS = [
 
   {
     id: 'st-kam-tin', name: { zh: '錦田市中心', en: 'Kam Tin Town Centre' },
-    region: 'nt', lat: 22.4382, lng: 114.0625,
+    region: 'nt', lat: 22.43759, lng: 114.062271,
     provider: { zh: 'LP Charge', en: 'LP Charge' }, providerCode: 'LP',
     ring: 'nodata', unverified: false,
     address: { zh: '錦田市中心', en: 'Kam Tin Town Centre' },
@@ -1897,7 +1897,7 @@ const STATIONS = [
 
   {
     id: 'st-sheungshui-plaza', name: { zh: '上水廣場', en: 'Sheung Shui Plaza' },
-    region: 'nt', lat: 22.5008, lng: 114.1278,
+    region: 'nt', lat: 22.501187, lng: 114.127474,
     provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '上水智昌路 2 號', en: '2 Chi Cheung Rd, Sheung Shui' },
@@ -1914,7 +1914,7 @@ const STATIONS = [
 
   {
     id: 'st-fanling', name: { zh: '粉嶺名都', en: 'Fanling Town Plaza' },
-    region: 'nt', lat: 22.4925, lng: 114.1382,
+    region: 'nt', lat: 22.491716, lng: 114.137483,
     provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
     ring: 'nodata', unverified: false,
     address: { zh: '粉嶺新運路 10 號', en: '10 San Wan Rd, Fanling' },
@@ -1947,7 +1947,7 @@ const STATIONS = [
 
   {
     id: 'st-sheungshui-tesla', name: { zh: '上水中心 Tesla', en: 'Sheung Shui Centre Tesla' },
-    region: 'nt', lat: 22.5022, lng: 114.1282,
+    region: 'nt', lat: 22.500662, lng: 114.128247,
     provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '上水智昌路', en: 'Chi Cheung Rd, SS' },
@@ -1981,7 +1981,7 @@ const STATIONS = [
 
   {
     id: 'st-sheungshui-station', name: { zh: '上水站停車場', en: 'Sheung Shui Station Car Park' },
-    region: 'nt', lat: 22.5015, lng: 114.1292,
+    region: 'nt', lat: 22.500091, lng: 114.128477,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '上水彩園路', en: 'Choi Yuen Rd, SS' },
@@ -2014,7 +2014,7 @@ const STATIONS = [
 
   {
     id: 'st-sheungshui-market', name: { zh: '上水街市', en: 'Sheung Shui Market' },
-    region: 'nt', lat: 22.5002, lng: 114.1268,
+    region: 'nt', lat: 22.500513, lng: 114.127095,
     provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
     ring: 'nodata', unverified: false,
     address: { zh: '上水新康街', en: 'San Hong St, SS' },
