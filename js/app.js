@@ -302,6 +302,27 @@ function initChatSystem() {
 
   // 預設開啟用戶頭像
   APP_STATE.showUserAvatars = localStorage.getItem('ev-show-users') !== '0';
+
+  // 地圖載入後渲染用戶頭像
+  if (typeof map !== 'undefined' && map) {
+    renderUserMarkers();
+    map.on('moveend', () => {
+      if (APP_STATE.showUserAvatars) renderUserMarkers();
+    });
+  } else {
+    // 等地圖載入完再渲染
+    const checkMap = setInterval(() => {
+      if (typeof map !== 'undefined' && map) {
+        clearInterval(checkMap);
+        renderUserMarkers();
+        map.on('moveend', () => {
+          if (APP_STATE.showUserAvatars) renderUserMarkers();
+        });
+      }
+    }, 500);
+    // 5 秒後停止嘗試
+    setTimeout(() => clearInterval(checkMap), 5000);
+  }
 }
 
 function toggleUserAvatars() {

@@ -47,14 +47,22 @@ function initMap(lat, lng) {
 
   markerLayer = L.layerGroup().addTo(map);
 
-  // 使用者位置
+  // 使用者位置 — 顯示頭像 + 用戶名
+  const userName = localStorage.getItem('ev-user-name') || 'Me';
+  const userAvatar = localStorage.getItem('ev-user-avatar') || '📍';
   const userIcon = L.divIcon({
     className: '',
-    iconSize: [22, 22],
-    iconAnchor: [11, 11],
-    html: `<div style="width:22px;height:22px;border-radius:50%;background:#3B82F6;border:3px solid #fff;box-shadow:0 0 0 3px rgba(59,130,246,0.35);"></div>`
+    iconSize: [50, 68],
+    iconAnchor: [25, 25],
+    html: `
+      <div class="user-marker">
+        <div class="user-avatar-circle" style="background:#3B82F6;font-size:22px">${userAvatar}</div>
+        <div class="user-status-dot online"></div>
+        <div class="user-label">${userName}（你）</div>
+      </div>
+    `
   });
-  userMarker = L.marker([lat, lng], { icon: userIcon, interactive: false }).addTo(map);
+  userMarker = L.marker([lat, lng], { icon: userIcon, interactive: false, zIndexOffset: 2000 }).addTo(map);
 
   map.on('zoomend', () => renderMarkers());
   map.on('moveend', () => {
@@ -70,6 +78,21 @@ function initMap(lat, lng) {
 function setUserLocation(lat, lng) {
   if (!map) return;
   userMarker.setLatLng([lat, lng]);
+  // 更新頭像內容（用戶名可能已改）
+  const userName = localStorage.getItem('ev-user-name') || 'Me';
+  const userAvatar = localStorage.getItem('ev-user-avatar') || '📍';
+  userMarker.setIcon(L.divIcon({
+    className: '',
+    iconSize: [50, 68],
+    iconAnchor: [25, 25],
+    html: `
+      <div class="user-marker">
+        <div class="user-avatar-circle" style="background:#3B82F6;font-size:22px">${userAvatar}</div>
+        <div class="user-status-dot online"></div>
+        <div class="user-label">${userName}（你）</div>
+      </div>
+    `
+  }));
 }
 
 /* ---------- Marker rendering ---------- */
