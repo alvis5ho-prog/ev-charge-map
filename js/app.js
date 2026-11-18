@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCarModelOptions();
   setupInstallPrompt();
   updateOnlineStatus();
-  startAPISync();  // CLP API 即時同步
+  startAPISync();
+  initChatSystem();  // 初始化通訊系統
 
   if (navigator.onLine && !APP_STATE.installed && !APP_STATE.installDismissed) {
     setTimeout(() => {
@@ -166,6 +167,15 @@ function setupEventListeners() {
     localStorage.setItem('ev-contrast', APP_STATE.highContrast ? '1' : '0');
     applyTheme();
   });
+  const chkAvatars = document.getElementById('chkUserAvatars');
+  if (chkAvatars) {
+    chkAvatars.checked = localStorage.getItem('ev-show-users') !== '0';
+    chkAvatars.addEventListener('change', e => {
+      APP_STATE.showUserAvatars = e.target.checked;
+      localStorage.setItem('ev-show-users', e.target.checked ? '1' : '0');
+      if (typeof renderUserMarkers === 'function') renderUserMarkers();
+    });
+  }
   document.getElementById('selCarModel').addEventListener('change', e => {
     APP_STATE.carModelId = e.target.value;
     localStorage.setItem('ev-car', APP_STATE.carModelId);
@@ -199,6 +209,104 @@ function toggleDarkMode() {
   APP_STATE.theme = cur === 'dark' ? 'light' : 'dark';
   localStorage.setItem('ev-theme', APP_STATE.theme);
   applyTheme();
+}
+
+/* ---------- Chat System (ICQ-style) ---------- */
+function initChatSystem() {
+  // 生成用戶 ID
+  if (!localStorage.getItem('ev-user-id')) {
+    localStorage.setItem('ev-user-id', 'u_' + Math.random().toString(36).substr(2, 9));
+    localStorage.setItem('ev-user-name', '用戶' + Math.floor(Math.random() * 999));
+  }
+
+  // Chat FAB 開關
+  const fabChat = document.getElementById('fabChat');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatClose = document.getElementById('chatClose');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+
+  if (fabChat) {
+    fabChat.addEventListener('click', () => {
+      chatPanel.classList.toggle('open');
+      if (chatPanel.classList.contains('open')) {
+        renderChatPanel();
+        chatInput.focus();
+      }
+    });
+  }
+
+  if (chatClose) {
+    chatClose.addEventListener('click', () => chatPanel.classList.remove('open'));
+  }
+
+  // 發送訊息
+  async function doSend() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    const stationId = APP_STATE.selectedStationId || null;
+    await sendChatMessage(text, stationId);
+    chatInput.value = '';
+  }
+
+  if (chatSend) chatSend.addEventListener('click', doSend);
+  if (chatInput) {
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') doSend();
+    });
+  }
+
+  // 初始化聊天 DB
+  if (typeof initChat === 'function') {
+    initChat().then(() => {
+      renderChatPanel();
+    });
+  }
+
+  // GPS 用戶頭像渲染
+  window.renderUserMarkers = function() {
+    if (!map) return;
+    // 清除舊用戶 marker
+    if (window._userMarkers) {
+      window._userMarkers.forEach(m => map.removeLayer(m));
+    }
+    window._userMarkers = [];
+
+    if (!APP_STATE.showUserAvatars) return;
+
+    const users = getNearbyUsers(
+      APP_STATE.mapCenter.lat,
+      APP_STATE.mapCenter.lng,
+      5
+    );
+
+    users.forEach(u => {
+      const icon = L.divIcon({
+        className: '',
+        iconSize: [44, 62],
+        iconAnchor: [22, 22],
+        html: `
+          <div class="user-marker">
+            <div class="user-avatar-circle">${u.avatar}</div>
+            <div class="user-status-dot ${u.status}"></div>
+            <div class="user-label">${u.name}</div>
+          </div>
+        `
+      });
+      const marker = L.marker([u.lat, u.lng], { icon, zIndexOffset: 1000 });
+      marker.addTo(map);
+      window._userMarkers.push(marker);
+    });
+  };
+
+  // 預設開啟用戶頭像
+  APP_STATE.showUserAvatars = localStorage.getItem('ev-show-users') !== '0';
+}
+
+function toggleUserAvatars() {
+  APP_STATE.showUserAvatars = !APP_STATE.showUserAvatars;
+  localStorage.setItem('ev-show-users', APP_STATE.showUserAvatars ? '1' : '0');
+  if (typeof renderUserMarkers === 'function') renderUserMarkers();
 }
 
 /* ---------- Battery slider ---------- */
