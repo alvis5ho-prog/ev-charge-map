@@ -1286,8 +1286,8 @@ ul { list-style: none; }
   border-radius: 50%;
   border: 2px solid #fff;
 }
-.user-marker .user-status-dot.charging { background: var(--success); }
-.user-marker .user-status-dot.idle { background: var(--warning); }
+.user-marker .user-status-dot.online { background: var(--success); }
+.user-marker .user-status-dot.off_gps { background: var(--warning); }
 
 /* ====== Mobile chat panel ====== */
 @media (max-width: 699px) {

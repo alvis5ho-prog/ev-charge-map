@@ -197,11 +197,12 @@ function updateUserPosition(lat, lng) {
 
 function getNearbyUsers(centerLat, centerLng, radiusKm = 5) {
   // 模擬附近用戶（實際需從 server / WebRTC 獲取）
-  // 這裡產生一些模擬用戶用於展示
   const mockUsers = [
-    { id: 'u1', name: 'EV_Driver_01', avatar: '🚗', lat: centerLat + 0.003, lng: centerLng + 0.002, status: 'charging' },
-    { id: 'u2', name: 'HK_Tesla', avatar: '⚡', lat: centerLat - 0.002, lng: centerLng + 0.004, status: 'idle' },
-    { id: 'u3', name: 'GreenRider', avatar: '🔋', lat: centerLat + 0.005, lng: centerLng - 0.003, status: 'charging' },
+    { id: 'u1', name: 'EV_Driver_01', avatar: '🚗', lat: centerLat + 0.003, lng: centerLng + 0.002, status: 'online' },
+    { id: 'u2', name: 'HK_Tesla', avatar: '⚡', lat: centerLat - 0.002, lng: centerLng + 0.004, status: 'off_gps' },
+    { id: 'u3', name: 'GreenRider', avatar: '🔋', lat: centerLat + 0.005, lng: centerLng - 0.003, status: 'online' },
+    { id: 'u4', name: 'NightOwl', avatar: '🌙', lat: centerLat - 0.004, lng: centerLng - 0.002, status: 'online' },
+    { id: 'u5', name: 'Speedy', avatar: '⚡', lat: centerLat + 0.006, lng: centerLng + 0.005, status: 'off_gps' },
   ];
   return mockUsers.filter(u => {
     const d = estimateDriveMin(centerLat, centerLng, u.lat, u.lng).distKm;
