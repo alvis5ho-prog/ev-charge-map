@@ -28,7 +28,8 @@ const BRAND_COLORS = {
   'TP':   '#E91E63',
   'EC':   '#00BCD4',
   'KN':   '#795548',
-  'HE':   '#FF5722'
+  'HE':   '#FF5722',
+  'XECO': '#4CAF50'
 };
 
 function initMap(lat, lng) {

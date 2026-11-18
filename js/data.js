@@ -1398,6 +1398,254 @@ const STATIONS = [
     queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
   },
 
+﻿  {
+    id: 'st-hyatt-shatin', name: { zh: '沙田凱悅酒店', en: 'Hyatt Regency Sha Tin' },
+    region: 'nt', lat: 22.4185, lng: 114.2135,
+    provider: { zh: 'Tesla (全 EV 開放)', en: 'Tesla (全 EV 開放)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田澤祥街 18 號', en: '18 Chak Cheung St, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 45, available: 22, stalls: [
+      { connector: 'CCS2', kw: 250, count: 32, available: 16 },
+      { connector: 'Type2', kw: 22, count: 13, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-yuchui-pit', name: { zh: '愉翠 B 停車場', en: 'Yue Chui Car Park B' },
+    region: 'nt', lat: 22.3792, lng: 114.2012,
+    provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田小瀝源牛皮沙街 2 號', en: '2 Ngau Pei Sha St, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 34, available: 17, stalls: [
+      { connector: 'CCS2', kw: 120, count: 12, available: 6 },
+      { connector: 'Type2', kw: 22, count: 22, available: 11 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-pit-fotan', name: { zh: 'PIT Ultra 火炭', en: 'PIT Ultra Fo Tan' },
+    region: 'nt', lat: 22.3955, lng: 114.1985,
+    provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
+    ring: 'nodata', unverified: false,
+    address: { zh: '火炭山尾街 34A 號', en: '34A Shan Mei St, Fo Tan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 12, available: 6, stalls: [
+      { connector: 'CCS2', kw: 500, count: 12, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-newport4', name: { zh: '新港城中心 4 期', en: 'New Town Plaza 4' },
+    region: 'nt', lat: 22.4255, lng: 114.2285,
+    provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
+    ring: 'nodata', unverified: false,
+    address: { zh: '馬鞍山鞍祿街 18 號', en: '18 On Luk St, Ma On Shan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 24, available: 12, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8, available: 4 },
+      { connector: 'Type2', kw: 22, count: 16, available: 8 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-yuchui-tesla', name: { zh: '愉翠 Tesla', en: 'Yue Chui Tesla' },
+    region: 'nt', lat: 22.3795, lng: 114.2015,
+    provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '小瀝源牛皮沙街 2 號', en: '2 Ngau Pei Sha St, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 18, available: 9, stalls: [
+      { connector: 'CCS2', kw: 250, count: 8, available: 4 },
+      { connector: 'Type2', kw: 22, count: 10, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-shunon', name: { zh: '頌安停車場', en: 'Shun On Car Park' },
+    region: 'nt', lat: 22.4275, lng: 114.2315,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '馬鞍山西沙路 632 號', en: '632 Sai Sha Rd, Ma On Shan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 54, available: 27, stalls: [
+      { connector: 'Type2', kw: 7, count: 54, available: 27 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-cuahk', name: { zh: '香港中文大學醫院', en: 'CUHK Medical Centre' },
+    region: 'nt', lat: 22.4168, lng: 114.2125,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田澤祥街 9 號', en: '9 Chak Cheung St, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 142, available: 71, stalls: [
+      { connector: 'Type2', kw: 7, count: 142, available: 71 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-stgov', name: { zh: '沙田政府合署', en: 'Sha Tin Govt Offices' },
+    region: 'nt', lat: 22.3835, lng: 114.1912,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上禾輋路 1 號', en: '1 Sheung Wo Che Rd, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 74, available: 37, stalls: [
+      { connector: 'Type2', kw: 7, count: 74, available: 37 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-wai-fong', name: { zh: '圍方', en: 'The Wai' },
+    region: 'nt', lat: 22.3735, lng: 114.1782,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '大圍車公廟路 18 號', en: '18 Che Kung Temple Rd, Tai Wai' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 68, available: 34, stalls: [
+      { connector: 'Type2', kw: 7, count: 68, available: 34 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-kwong-yuen', name: { zh: '沙田廣源 A 停車場', en: 'Kwong Yuen Car Park A' },
+    region: 'nt', lat: 22.3812, lng: 114.2002,
+    provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '廣源邨 1 號停車場', en: 'Kwong Yuen Estate Car Park 1' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 57, available: 28, stalls: [
+      { connector: 'Type2', kw: 7, count: 57, available: 28 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-chun-on', name: { zh: '駿景廣場', en: 'Chun On Plaza' },
+    region: 'nt', lat: 22.3962, lng: 114.1962,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '火炭駿景路 1 號', en: '1 Chun King Rd, Fo Tan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 11, available: 5, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6, available: 3 },
+      { connector: 'Type2', kw: 22, count: 5, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-shatin-centre2', name: { zh: '沙田中心停車場', en: 'Shatin Centre Car Park' },
+    region: 'nt', lat: 22.3822, lng: 114.1899,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '沙田橫壆街 2-16 號', en: '2-16 Wang Pok St, Sha Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 15, available: 7, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6, available: 3 },
+      { connector: 'Type2', kw: 22, count: 9, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-fotan-fast', name: { zh: '火炭穗禾路小馬快充', en: 'Fo Tan Fast Charge' },
+    region: 'nt', lat: 22.3942, lng: 114.1992,
+    provider: { zh: 'GCSS 全港充', en: 'GCSS 全港充' }, providerCode: 'GCSS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '火炭何瀝背街 1 號', en: '1 Wo Loi Pai St, Fo Tan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-maonshan-plaza', name: { zh: '馬鞍山廣場', en: 'Ma On Shan Plaza' },
+    region: 'nt', lat: 22.4268, lng: 114.2312,
+    provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
+    ring: 'nodata', unverified: false,
+    address: { zh: '馬鞍山西沙路 608 號', en: '608 Sai Sha Rd, Ma On Shan' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-sciencepk2', name: { zh: '香港科學園二期', en: 'Science Park Phase 2' },
+    region: 'nt', lat: 22.4245, lng: 114.2102,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '科學園科技大道西 8-10 號', en: '8-10 Science Park West Ave' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 24, available: 12, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 20, available: 10 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
 ];
 
 /* ---- 計算工具 ---- */

@@ -816,15 +816,44 @@ function setupReportHandlers() {
     });
   });
 
-  // Photo upload
+  // Photo upload — 拍照 / 相簿分開按鈕
   const photoZone = document.getElementById('photoUploadZone');
   const photoInput = document.getElementById('photoInput');
   const photoPrompt = document.getElementById('photoUploadPrompt');
+  const btnCamera = document.getElementById('btnCamera');
+  const btnGallery = document.getElementById('btnGallery');
 
-  // 點擊提示區或預覽區都可以觸發上載
-  photoPrompt.addEventListener('click', () => photoInput.click());
+  // 拍照（capture 屬性由 JS 動態設置）
+  if (btnCamera) {
+    btnCamera.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      photoInput.setAttribute('capture', 'environment');
+      photoInput.removeAttribute('accept');
+      photoInput.setAttribute('accept', 'image/*');
+      photoInput.click();
+    });
+  }
+
+  // 從相簿選取（唔設 capture）
+  if (btnGallery) {
+    btnGallery.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      photoInput.removeAttribute('capture');
+      photoInput.setAttribute('accept', 'image/*');
+      photoInput.click();
+    });
+  }
+
+  // 點擊預覽區
+  photoPrompt.addEventListener('click', (e) => {
+    e.preventDefault();
+    photoInput.removeAttribute('capture');
+    photoInput.click();
+  });
   photoZone.addEventListener('click', (e) => {
-    if (e.target === photoInput || e.target.closest('.photo-remove-btn')) return;
+    if (e.target === photoInput || e.target.closest('.photo-remove-btn') || e.target.closest('.photo-source-btns')) return;
     photoInput.click();
   });
 
