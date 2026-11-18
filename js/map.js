@@ -29,7 +29,9 @@ const BRAND_COLORS = {
   'EC':   '#00BCD4',
   'KN':   '#795548',
   'HE':   '#FF5722',
-  'XECO': '#4CAF50'
+  'XECO': '#4CAF50',
+  'LP':   '#009688',
+  'S3':   '#37474F'
 };
 
 function initMap(lat, lng) {

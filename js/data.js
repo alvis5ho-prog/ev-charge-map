@@ -1646,6 +1646,421 @@ const STATIONS = [
     queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
   },
 
+﻿  {
+    id: 'st-kamsheung', name: { zh: '錦上路車站停車場', en: 'Kam Sheung Rd Station Car Park' },
+    region: 'nt', lat: 22.4322, lng: 114.0642,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '錦田錦河路 29 號', en: '29 Kam Ho Rd, Kam Tin' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 188, available: 94, stalls: [
+      { connector: 'CCS2', kw: 120, count: 5, available: 2 },
+      { connector: 'Type2', kw: 7, count: 183, available: 91 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-ttown-n', name: { zh: 'T-Town North', en: 'T-Town North Tin Shui Wai' },
+    region: 'nt', lat: 22.4432, lng: 114.0025,
+    provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍天華路 33 號', en: '33 Tin Wah Rd, Tin Shui Wai' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 33, available: 16, stalls: [
+      { connector: 'CCS2', kw: 120, count: 6, available: 3 },
+      { connector: 'Type2', kw: 22, count: 27, available: 13 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-tinsing', name: { zh: '天盛苑停車場', en: 'Tin Shing Court Car Park' },
+    region: 'nt', lat: 22.4465, lng: 114.0042,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍天靖街 3 號', en: '3 Tin Ching St, Tin Shui Wai' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 30, available: 15, stalls: [
+      { connector: 'CCS2', kw: 120, count: 2, available: 1 },
+      { connector: 'Type2', kw: 22, count: 28, available: 14 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-yoho-mall', name: { zh: '形點 YOHO MALL', en: 'YOHO MALL Yuen Long' },
+    region: 'nt', lat: 22.4455, lng: 114.0325,
+    provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗元龍街 9 號', en: '9 Yuen Lung St, Yuen Long' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 12, available: 6, stalls: [
+      { connector: 'CCS2', kw: 250, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 8, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-lukping', name: { zh: '朗屏 D 停車場', en: 'Luk Ping Car Park D' },
+    region: 'nt', lat: 22.4372, lng: 114.0252,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍屏廈路', en: 'Ping Ha Rd, Tin Shui Wai' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 27, available: 13, stalls: [
+      { connector: 'Type2', kw: 7, count: 27, available: 13 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-ttown-s', name: { zh: '天水圍 T Town South', en: 'T Town South Tin Shui Wai' },
+    region: 'nt', lat: 22.4428, lng: 114.0022,
+    provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍天華路 30-33 號', en: '30-33 Tin Wah Rd, TSW' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 25, available: 12, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 7, count: 21, available: 10 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-ping-shan', name: { zh: '屏山山下村站', en: 'Ping Shan Ha Tsuen' },
+    region: 'nt', lat: 22.4368, lng: 114.0085,
+    provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗山下村樹德路', en: 'Shu Tak Rd, Ha Tsuen' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-yuenlong-e', name: { zh: '元朗東成里', en: 'Yuen Long Tung Sing Lei' },
+    region: 'nt', lat: 22.4418, lng: 114.0335,
+    provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗東成里 132 號', en: '132 Tung Sing Lei, YL' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 8, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-tsingshui', name: { zh: '洪水橋田心村超快充', en: 'Hung Shui Kiu Fast Charge' },
+    region: 'nt', lat: 22.4282, lng: 113.9935,
+    provider: { zh: 'XECO', en: 'XECO' }, providerCode: 'XECO',
+    ring: 'nodata', unverified: false,
+    address: { zh: '洪水橋田厦路緻和園 1 號', en: '1 Tin Ha Rd, HSK' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 19, available: 9, stalls: [
+      { connector: 'CCS2', kw: 250, count: 19, available: 9 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-kinsang', name: { zh: '元朗千色匯', en: 'Yuen Long colours' },
+    region: 'nt', lat: 22.4435, lng: 114.0312,
+    provider: { zh: '中石化 PIT', en: '中石化 PIT' }, providerCode: 'PIT',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗教育路 1 號', en: '1 Kau Yuk Rd, YL' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 12, available: 6, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 8, available: 4 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-pak-wai', name: { zh: '天水圍栢慧', en: 'Pak Wai Tin Shui Wai' },
+    region: 'nt', lat: 22.4482, lng: 114.0018,
+    provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍天恩路 2 號', en: '2 Tin Yan Rd, TSW' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 38, available: 19, stalls: [
+      { connector: 'CCS2', kw: 120, count: 2, available: 1 },
+      { connector: 'Type2', kw: 7, count: 36, available: 18 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-long-ping', name: { zh: '朗屏站', en: 'Long Ping Station' },
+    region: 'nt', lat: 22.4385, lng: 114.0245,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗朗屏路', en: 'Long Ping Rd, YL' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 12, available: 6, stalls: [
+      { connector: 'CCS2', kw: 60, count: 2, available: 1 },
+      { connector: 'Type2', kw: 7, count: 10, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-yoho-plus', name: { zh: 'YOHO Plus', en: 'YOHO Plus Yuen Long' },
+    region: 'nt', lat: 22.4458, lng: 114.0328,
+    provider: { zh: 'The Point 特快充電', en: 'The Point 特快充電' }, providerCode: 'TP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '元朗朗日路 8-9 號', en: '8-9 Long Yat Rd, YL' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 4, available: 2, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-tin-shui-wai-tesla', name: { zh: '天盛 Tesla', en: 'Tin Shing Tesla' },
+    region: 'nt', lat: 22.4468, lng: 114.0038,
+    provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '天水圍天靖街 3 號', en: '3 Tin Ching St, TSW' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 10, available: 5, stalls: [
+      { connector: 'CCS2', kw: 250, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 6, available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-kam-tin', name: { zh: '錦田市中心', en: 'Kam Tin Town Centre' },
+    region: 'nt', lat: 22.4382, lng: 114.0625,
+    provider: { zh: 'LP Charge', en: 'LP Charge' }, providerCode: 'LP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '錦田市中心', en: 'Kam Tin Town Centre' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 3, available: 1, stalls: [
+      { connector: 'CCS2', kw: 120, count: 3, available: 1 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-sheungshui-plaza', name: { zh: '上水廣場', en: 'Sheung Shui Plaza' },
+    region: 'nt', lat: 22.5008, lng: 114.1278,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水智昌路 2 號', en: '2 Chi Cheung Rd, Sheung Shui' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 20, available: 10, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 16, available: 8 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-fanling', name: { zh: '粉嶺名都', en: 'Fanling Town Plaza' },
+    region: 'nt', lat: 22.4925, lng: 114.1382,
+    provider: { zh: 'Shell Recharge', en: 'Shell Recharge' }, providerCode: 'SH',
+    ring: 'nodata', unverified: false,
+    address: { zh: '粉嶺新運路 10 號', en: '10 San Wan Rd, Fanling' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 15, available: 7, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 11, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-north-gov', name: { zh: '北區政府合署', en: 'North District Govt Offices' },
+    region: 'nt', lat: 22.4982, lng: 114.1325,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水新成路', en: 'San Shing Ave, Sheung Shui' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 12, available: 6, stalls: [
+      { connector: 'Type2', kw: 7, count: 12, available: 6 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-sheungshui-tesla', name: { zh: '上水中心 Tesla', en: 'Sheung Shui Centre Tesla' },
+    region: 'nt', lat: 22.5022, lng: 114.1282,
+    provider: { zh: 'Tesla (品牌專用)', en: 'Tesla (品牌專用)' }, providerCode: 'TS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水智昌路', en: 'Chi Cheung Rd, SS' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 250, count: 4, available: 2 },
+      { connector: 'Type2', kw: 22, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-fanling-arena', name: { zh: '粉嶺體育館', en: 'Fanling Sports Centre' },
+    region: 'nt', lat: 22.4938, lng: 114.1395,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '粉嶺新運路', en: 'San Wan Rd, Fanling' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 6, available: 3, stalls: [
+      { connector: 'CCS2', kw: 60, count: 1, available: 0 },
+      { connector: 'Type2', kw: 7, count: 5, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-sheungshui-station', name: { zh: '上水站停車場', en: 'Sheung Shui Station Car Park' },
+    region: 'nt', lat: 22.5015, lng: 114.1292,
+    provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水彩園路', en: 'Choi Yuen Rd, SS' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 8, available: 4, stalls: [
+      { connector: 'CCS2', kw: 120, count: 2, available: 1 },
+      { connector: 'Type2', kw: 22, count: 6, available: 3 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-fanling-wai', name: { zh: '粉嶺華明', en: 'Fanling Wah Ming' },
+    region: 'nt', lat: 22.4898, lng: 114.1408,
+    provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
+    ring: 'nodata', unverified: false,
+    address: { zh: '粉嶺華明路', en: 'Wah Ming Rd, Fanling' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 10, available: 5, stalls: [
+      { connector: 'Type2', kw: 7, count: 10, available: 5 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-sheungshui-market', name: { zh: '上水街市', en: 'Sheung Shui Market' },
+    region: 'nt', lat: 22.5002, lng: 114.1268,
+    provider: { zh: '三號電站', en: '三號電站' }, providerCode: 'S3',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水新康街', en: 'San Hong St, SS' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 4, available: 2, stalls: [
+      { connector: 'CCS2', kw: 120, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-fanling-station', name: { zh: '粉嶺站', en: 'Fanling Station' },
+    region: 'nt', lat: 22.4922, lng: 114.1378,
+    provider: { zh: 'Jove（港鐵）', en: 'Jove（港鐵）' }, providerCode: 'JOVE',
+    ring: 'nodata', unverified: false,
+    address: { zh: '粉嶺車站路', en: 'Station Rd, Fanling' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 6, available: 3, stalls: [
+      { connector: 'CCS2', kw: 120, count: 2, available: 1 },
+      { connector: 'Type2', kw: 22, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
+  {
+    id: 'st-north-pool', name: { zh: '北區游泳池', en: 'North District Swimming Pool' },
+    region: 'nt', lat: 22.4975, lng: 114.1332,
+    provider: { zh: 'E-Charge', en: 'E-Charge' }, providerCode: 'EC',
+    ring: 'nodata', unverified: false,
+    address: { zh: '上水天平路', en: 'Tin Ping Rd, SS' },
+    parking: { zh: '時租 HK\\ / 小時', en: 'HK\\ / hour' },
+    parkingNote: { zh: '無特別豁免', en: 'No special waiver' },
+    payment: { zh: 'App', en: 'App' },
+    hours: { zh: '24 小時', en: '24 hours' },
+    floors: [{ level: { zh: '停車場', en: 'Car Park' }, total: 4, available: 2, stalls: [
+      { connector: 'Type2', kw: 7, count: 4, available: 2 }
+    ]}],
+    queue: 0, queueConfidence: 'none', historyFailRate: 0.02, reports: []
+  },
+
 ];
 
 /* ---- 計算工具 ---- */
