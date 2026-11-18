@@ -88,14 +88,22 @@ function applyDataTransparency() {
   const API_PROVIDERS = ['CLP'];
 
   STATIONS.forEach(st => {
-    // CLP 有公開 API，就算快取匹配唔到都視為有即時數據來源
     const hasAPI = API_PROVIDERS.includes(st.providerCode);
     st.hasLiveAPI = hasAPI;
+
+    // 數據一致性：有空位就唔應該顯示大排長龍
+    const totals = stationTotals(st);
+    if (st.ring === 'crowded' && totals.available > 0) {
+      st.ring = totals.available < totals.total * 0.2 ? 'busy' : 'available';
+    }
+    if (st.ring === 'busy' && totals.available >= totals.total * 0.5) {
+      st.ring = 'available';
+    }
 
     if (hasAPI && st.apiSynced) {
       st.dataSource = 'api';
     } else if (hasAPI) {
-      st.dataSource = 'api';  // CLP 有 API，標示為即時數據
+      st.dataSource = 'api';
     } else if (st._userReported) {
       st.dataSource = 'crowd';
     } else {

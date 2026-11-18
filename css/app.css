@@ -1158,6 +1158,25 @@ ul { list-style: none; }
   font-weight: 700;
 }
 
+.chat-save-all-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--r-md);
+  margin-bottom: var(--sp-2);
+}
+.chat-save-all-btn {
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  cursor: pointer;
+}
+.chat-save-all-btn:active { transform: scale(0.95); }
+
 .chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -1303,12 +1322,27 @@ ul { list-style: none; }
   }
   .fab-chat {
     bottom: calc(var(--sab) + 72px);
+    right: calc(var(--sar) + var(--sp-3));
     width: 52px; height: 52px;
+    z-index: calc(var(--z-panel) + 15);
   }
   .fab {
     width: 52px; height: 52px;
     bottom: calc(var(--sab) + var(--sp-3));
     right: calc(var(--sar) + var(--sp-3));
+    z-index: calc(var(--z-panel) + 15);
+  }
+  /* 電量滑桿佔左邊，唔好遮 FAB */
+  .battery-dock {
+    left: calc(var(--sal) + var(--sp-2));
+    bottom: calc(var(--sab) + var(--sp-3));
+    width: 60px;
+    z-index: var(--z-fab);
+  }
+  /* 面板開時 FAB 都要可見 */
+  .panel.open ~ .fab,
+  .panel.open ~ .fab-chat {
+    z-index: calc(var(--z-panel) + 15);
   }
 }
 

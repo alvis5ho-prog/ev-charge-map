@@ -1385,7 +1385,7 @@ const STATIONS = [
     id: 'st-citygate', name: { zh: '東薈城 Citygate', en: 'Citygate Outlets' },
     region: 'nt', lat: 22.289958, lng: 113.9427,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
-    ring: 'nodata', unverified: false,
+    ring: 'available', unverified: false,
     address: { zh: '東涌達東路 20 號', en: '20 Tat Tung Rd, Tung Chung' },
     parking: { zh: '時租 HK\ / 小時', en: 'HK\ / hour' },
     parkingNote: { zh: '消費可換泊車優惠', en: 'Spending for parking waiver' },

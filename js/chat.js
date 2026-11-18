@@ -122,6 +122,32 @@ async function addMessage(text, userId, userName, userAvatar, stationId) {
   });
 }
 
+async function saveAllTodayMessages() {
+  if (!chatDB) return 0;
+  const messages = await getMessages(MAX_SESSION_MESSAGES);
+  const today = new Date().toDateString();
+  let savedCount = 0;
+
+  return new Promise((resolve) => {
+    const tx = chatDB.transaction('messages', 'readwrite');
+    const store = tx.objectStore('messages');
+
+    messages.forEach(msg => {
+      if (!msg.saved && new Date(msg.timestamp).toDateString() === today) {
+        msg.saved = true;
+        store.put(msg);
+        savedCount++;
+      }
+    });
+
+    tx.oncomplete = () => {
+      notifyListeners('saveAll', savedCount);
+      renderChatPanel();
+      resolve(savedCount);
+    };
+  });
+}
+
 async function saveMessage(msgId) {
   if (!chatDB) return;
   return new Promise((resolve, reject) => {
@@ -216,23 +242,34 @@ function renderChatPanel() {
   if (!container) return;
 
   getMessages(50).then(messages => {
-    container.innerHTML = messages.map(m => `
-      <div class="chat-msg ${m.saved ? 'saved' : ''}" data-id="${m.id}">
-        <div class="chat-msg-header">
-          <span class="chat-avatar">${m.userAvatar || '👤'}</span>
-          <span class="chat-username">${m.userName}</span>
-          <span class="chat-time">${formatTime(m.timestamp)}</span>
-          ${m.saved ? '<span class="chat-saved-badge">💾</span>' : ''}
-        </div>
-        <div class="chat-msg-text">${escapeHtml(m.text)}</div>
-        <div class="chat-msg-actions">
-          <button class="chat-action-btn" onclick="saveMessage(${m.id}).then(renderChatPanel)" title="保存">
-            ${m.saved ? '💾 已保存' : '💾 保存'}
+    // 保存全部按鈕（喺頂部）
+    const todayMsgs = messages.filter(m => new Date(m.timestamp).toDateString() === new Date().toDateString());
+    const unsavedCount = todayMsgs.filter(m => !m.saved).length;
+
+    container.innerHTML = `
+      ${unsavedCount > 0 ? `
+        <div class="chat-save-all-bar">
+          <span class="text-xs">${todayMsgs.length} 則當日訊息（${unsavedCount} 未保存）</span>
+          <button class="chat-save-all-btn" onclick="saveAllTodayMessages()">
+            💾 保存全部當日訊息
           </button>
-          ${m.stationId ? `<button class="chat-action-btn" onclick="openStation('${m.stationId}')" title="查看站點">📍 站點</button>` : ''}
         </div>
-      </div>
-    `).join('');
+      ` : ''}
+      ${messages.map(m => `
+        <div class="chat-msg ${m.saved ? 'saved' : ''}" data-id="${m.id}">
+          <div class="chat-msg-header">
+            <span class="chat-avatar">${m.userAvatar || '👤'}</span>
+            <span class="chat-username">${m.userName}</span>
+            <span class="chat-time">${formatTime(m.timestamp)}</span>
+            ${m.saved ? '<span class="chat-saved-badge">💾</span>' : ''}
+          </div>
+          <div class="chat-msg-text">${escapeHtml(m.text)}</div>
+          <div class="chat-msg-actions">
+            ${m.stationId ? `<button class="chat-action-btn" onclick="openStation('${m.stationId}')" title="查看站點">📍 站點</button>` : ''}
+          </div>
+        </div>
+      `).join('')}
+    `;
     container.scrollTop = container.scrollHeight;
   });
 }
