@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupInstallPrompt();
   updateOnlineStatus();
   startAPISync();
-  initChatSystem();  // 初始化通訊系統
+  initChatSystem();
+  initTransport();  // 自適應 polling
 
   if (navigator.onLine && !APP_STATE.installed && !APP_STATE.installDismissed) {
     setTimeout(() => {
