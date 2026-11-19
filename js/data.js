@@ -532,7 +532,7 @@ const STATIONS = [
   /* ===== 觀塘區（EV-BOY 2026-11 資料） ===== */
   {
     id: 'st-dtf2', name: { zh: '德福廣場二期', en: 'Telford Plaza Phase 2' },
-    region: 'kln', lat: 22.323529, lng: 114.212707,
+    region: 'kln', lat: 22.320933624216, lng: 114.213054,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣偉業街 33 號', en: '33 Wai Yip St, Kowloon Bay' },
@@ -572,7 +572,7 @@ const STATIONS = [
   },
   {
     id: 'st-ctf-tesla', name: { zh: '周大福保險中心 Tesla', en: 'CTF Insurance Centre Tesla' },
-    region: 'kln', lat: 22.3188, lng: 114.2122,
+    region: 'kln', lat: 22.321348, lng: 114.210079,
     provider: { zh: 'Tesla（品牌專用）', en: 'Tesla (Brand Only)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣常悅道 18 號', en: '18 Sheung Yuet Rd, Kowloon Bay' },
@@ -591,7 +591,7 @@ const STATIONS = [
   },
   {
     id: 'st-cendas', name: { zh: 'THE CENDAS', en: 'THE CENDAS' },
-    region: 'kln', lat: 22.3172, lng: 114.2148,
+    region: 'kln', lat: 22.322307953, lng: 114.209919345,
     provider: { zh: 'Cornerstone', en: 'Cornerstone' }, providerCode: 'CS',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣常悅道 15 號', en: '15 Sheung Yuet Rd, Kowloon Bay' },
@@ -610,7 +610,7 @@ const STATIONS = [
   },
   {
     id: 'st-apac-tesla', name: { zh: '1 亞太中心 Tesla', en: '1 Asia Pacific Centre Tesla' },
-    region: 'kln', lat: 22.3158, lng: 114.2152,
+    region: 'kln', lat: 22.312521, lng: 114.224405,
     provider: { zh: 'Tesla（品牌專用）', en: 'Tesla (Brand Only)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘道 414 號 B3', en: '414 Kwun Tong Rd, B3' },
@@ -630,7 +630,7 @@ const STATIONS = [
   },
   {
     id: 'st-ym2', name: { zh: 'YM² 裕民坊', en: 'YM² Yue Man Square' },
-    region: 'kln', lat: 22.3118, lng: 114.2258,
+    region: 'kln', lat: 22.31461, lng: 114.2252,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘協和街 33 號', en: '33 Hip Wo St, Kwun Tong' },
@@ -650,7 +650,7 @@ const STATIONS = [
   },
   {
     id: 'st-hontin-tesla', name: { zh: '宏天廣場 Tesla', en: 'Horizon Plaza Tesla' },
-    region: 'kln', lat: 22.3212, lng: 114.2108,
+    region: 'kln', lat: 22.326138, lng: 114.205184,
     provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All EV)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣宏光道 39 號 3F', en: '39 Wang Kwong Rd, 3F, Kowloon Bay' },
@@ -670,7 +670,7 @@ const STATIONS = [
   },
   {
     id: 'st-metro', name: { zh: '九龍灣美羅中心', en: 'Metro Centre Kowloon Bay' },
-    region: 'kln', lat: 22.3196, lng: 114.2118,
+    region: 'kln', lat: 22.324051, lng: 114.210411,
     provider: { zh: '三號電站', en: 'Station 3' }, providerCode: 'S3',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣臨興街 32 號美羅中心 1 期地下 7–8 室', en: 'Shop 7-8, Metro Centre 1, 32 Lam Hing St, Kowloon Bay' },
@@ -689,7 +689,7 @@ const STATIONS = [
   },
   {
     id: 'st-hungto-gcss', name: { zh: '觀塘鴻圖道威德超充', en: 'Wai Tak Super, Hung To Rd' },
-    region: 'kln', lat: 22.312599, lng: 114.225902,
+    region: 'kln', lat: 22.314057987663, lng: 114.21847575066,
     provider: { zh: 'GCSS 全港充', en: 'GCSS' }, providerCode: 'GCSS',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘鴻圖道 8 號樂居工業大廈 G/F', en: 'G/F, Lok Kui Industrial Bldg, 8 Hung To Rd, Kwun Tong' },
@@ -708,7 +708,7 @@ const STATIONS = [
   },
   {
     id: 'st-harbour-fast', name: { zh: '海濱滙快充站', en: 'Harbour East Fast Charge' },
-    region: 'kln', lat: 22.3102, lng: 114.2192,
+    region: 'kln', lat: 22.316534, lng: 114.213709,
     provider: { zh: '潤心充', en: 'Runxin' }, providerCode: 'RX',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘海濱道 77 號海濱匯停車場 B2', en: 'B2, Harbour East Car Park, 77 Hoi Bun Rd, Kwun Tong' },
@@ -727,7 +727,7 @@ const STATIONS = [
   },
   {
     id: 'st-shunli-clpe', name: { zh: '順利街市停車場', en: 'Shun Lee Market Car Park' },
-    region: 'kln', lat: 22.3332, lng: 114.2268,
+    region: 'kln', lat: 22.33252, lng: 114.22523,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '觀塘利安道 15 號順利商場', en: 'Shun Lee Shopping Centre, 15 Lei On Rd, Kwun Tong' },
@@ -747,7 +747,7 @@ const STATIONS = [
   },
   {
     id: 'st-dch-kb', name: { zh: '大昌行集團大廈', en: 'Dah Chong Hong Tower' },
-    region: 'kln', lat: 22.3248, lng: 114.2077,
+    region: 'kln', lat: 22.324776, lng: 114.2076569,
     provider: { zh: '大昌行', en: 'Dah Chong Hong' }, providerCode: 'DCH',
     ring: 'nodata', unverified: false,
     address: { zh: '九龍灣啟祥道 20 號大昌行集團大廈一樓', en: '1/F, Dah Chong Hong Tower, 20 Kai Cheung Rd, Kowloon Bay' },
@@ -770,7 +770,7 @@ const STATIONS = [
   },
   {
     id: 'st-pit-kb', name: { zh: 'PIT Ultra 九龍灣超充站', en: 'PIT Ultra Kowloon Bay Max:600kW' },
-    region: 'kln', lat: 22.3205, lng: 114.2057,
+    region: 'kln', lat: 22.32052341, lng: 114.205734,
     provider: { zh: '中石化 PIT', en: 'Sinopec PIT (Power In Time)' }, providerCode: 'PIT',
     ring: 'crowded', unverified: false, _userReported: true,
     address: { zh: '九龍灣啟福道 8 號（啟福道與承佑街交界，前身為蜆殼油站）', en: '8 Kai Fuk Rd, Kowloon Bay (junction of Kai Fuk Rd & Shing Yau St, former Shell station)' },
@@ -811,7 +811,7 @@ const STATIONS = [
   /* ===== 將軍澳 / 西貢區（EV-BOY 2026-11 資料） ===== */
   {
     id: 'st-choiming2', name: { zh: '彩明 2 號停車場', en: 'Choi Ming Car Park 2' },
-    region: 'nt', lat: 22.382222, lng: 114.269342,
+    region: 'nt', lat: 22.308972, lng: 114.255308,
     provider: { zh: 'CLPe', en: 'CLPe' }, providerCode: 'CLP',
     ring: 'nodata', unverified: false,
     address: { zh: '調景嶺彩明街 1 號彩明商場', en: 'Choi Ming Shopping Centre, 1 Choi Ming St, Tiu Keng Leng' },
@@ -827,7 +827,7 @@ const STATIONS = [
   },
   {
     id: 'st-lohas', name: { zh: 'The LOHAS 康城', en: 'The LOHAS LOHAS Park' },
-    region: 'nt', lat: 22.29758, lng: 114.270067,
+    region: 'nt', lat: 22.29385, lng: 114.26988,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳康城路 1 號', en: '1 LOHAS Rd, Tseung Kwan O' },
@@ -843,7 +843,7 @@ const STATIONS = [
   },
   {
     id: 'st-cp-lohas', name: { zh: '充美好康城超充站', en: 'ChargePlus LOHAS Super' },
-    region: 'nt', lat: 22.296549, lng: 114.270801,
+    region: 'nt', lat: 22.2940329107, lng: 114.269819004,
     provider: { zh: '充美好（華潤）', en: 'ChargePlus (CR)' }, providerCode: 'CP',
     ring: 'nodata', unverified: false,
     address: { zh: '將軍澳康城路 1 號康城停車場', en: 'LOHAS Park Car Park, 1 LOHAS Rd, Tseung Kwan O' },
@@ -1046,7 +1046,7 @@ const STATIONS = [
 
 ﻿  {
     id: 'st-elements-n', name: { zh: '圓方北停車場', en: 'Elements North Car Park' },
-    region: 'kln', lat: 22.303258, lng: 114.160097,
+    region: 'kln', lat: 22.30627, lng: 114.16197,
     provider: { zh: 'Jove（港鐵）', en: 'Jove (MTR)' }, providerCode: 'JOVE',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀柯士甸道西 1 號', en: '1 Austin Rd West, TST' },
@@ -1113,7 +1113,7 @@ const STATIONS = [
 
   {
     id: 'st-harbourcity-tesla', name: { zh: '海運大廈 Tesla', en: 'Ocean Terminal Tesla' },
-    region: 'kln', lat: 22.2960, lng: 114.1688,
+    region: 'kln', lat: 22.29508, lng: 114.16651,
     provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀廣東道 3 至 27 號海運大廈', en: 'Ocean Terminal, 3-27 Canton Rd, TST' },
@@ -1130,7 +1130,7 @@ const STATIONS = [
 
   {
     id: 'st-k11', name: { zh: 'K11 人文購物藝術館', en: 'K11 Musea' },
-    region: 'kln', lat: 22.295425, lng: 114.172011,
+    region: 'kln', lat: 22.2950886229, lng: 114.1753954043,
     provider: { zh: 'KINETA', en: 'KINETA' }, providerCode: 'KN',
     ring: 'nodata', unverified: false,
     address: { zh: '尖沙咀梳士巴利道 18 號', en: '18 Salisbury Rd, TST' },
@@ -1147,7 +1147,7 @@ const STATIONS = [
 
   {
     id: 'st-olympian', name: { zh: '奧海城一期', en: 'Olympian City Phase 1' },
-    region: 'kln', lat: 22.316165, lng: 114.159208,
+    region: 'kln', lat: 22.320121, lng: 114.157892,
     provider: { zh: 'Tesla（全 EV 開放）', en: 'Tesla (Open to All)' }, providerCode: 'TS',
     ring: 'nodata', unverified: false,
     address: { zh: '大角咀海輝道 11 號', en: '11 Hoi Fai Rd, Tai Kok Tsui' },
