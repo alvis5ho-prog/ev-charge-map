@@ -222,13 +222,14 @@ function updateUserPosition(lat, lng) {
 }
 
 function getNearbyUsers(centerLat, centerLng, radiusKm = 5) {
-  // 模擬附近用戶（實際需從 server / WebRTC 獲取）
+  // 固定座標嘅模擬用戶（唔跟地圖移動）
+  // 這些是 DEMO 用戶，實際部署時需從 server/WebRTC 獲取真實用戶位置
   const mockUsers = [
-    { id: 'u1', name: 'EV_Driver_01', avatar: '🚗', lat: centerLat + 0.003, lng: centerLng + 0.002, status: 'online' },
-    { id: 'u2', name: 'HK_Tesla', avatar: '⚡', lat: centerLat - 0.002, lng: centerLng + 0.004, status: 'off_gps' },
-    { id: 'u3', name: 'GreenRider', avatar: '🔋', lat: centerLat + 0.005, lng: centerLng - 0.003, status: 'online' },
-    { id: 'u4', name: 'NightOwl', avatar: '🌙', lat: centerLat - 0.004, lng: centerLng - 0.002, status: 'online' },
-    { id: 'u5', name: 'Speedy', avatar: '⚡', lat: centerLat + 0.006, lng: centerLng + 0.005, status: 'off_gps' },
+    { id: 'demo1', name: 'EV_Driver_01', avatar: '🚗', lat: 22.3180, lng: 114.1700, status: 'online', isDemo: true },
+    { id: 'demo2', name: 'HK_Tesla', avatar: '⚡', lat: 22.3155, lng: 114.1680, status: 'online', isDemo: true },
+    { id: 'demo3', name: 'GreenRider', avatar: '🔋', lat: 22.3210, lng: 114.1730, status: 'off_gps', isDemo: true },
+    { id: 'demo4', name: 'NightOwl', avatar: '🌙', lat: 22.3120, lng: 114.1650, status: 'online', isDemo: true },
+    { id: 'demo5', name: 'Speedy', avatar: '⚡', lat: 22.3240, lng: 114.1760, status: 'off_gps', isDemo: true },
   ];
   return mockUsers.filter(u => {
     const d = estimateDriveMin(centerLat, centerLng, u.lat, u.lng).distKm;

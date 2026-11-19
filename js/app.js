@@ -290,11 +290,11 @@ function initChatSystem() {
           <div class="user-marker">
             <div class="user-avatar-circle">${u.avatar}</div>
             <div class="user-status-dot ${u.status}"></div>
-            <div class="user-label">${u.name}</div>
+            <div class="user-label">${u.name}${u.isDemo ? ' [模擬]' : ''}</div>
           </div>
         `
       });
-      const marker = L.marker([u.lat, u.lng], { icon, zIndexOffset: 1000 });
+      const marker = L.marker([u.lat, u.lng], { icon, zIndexOffset: 1000, interactive: false });
       marker.addTo(map);
       window._userMarkers.push(marker);
     });
@@ -303,24 +303,16 @@ function initChatSystem() {
   // 預設開啟用戶頭像
   APP_STATE.showUserAvatars = localStorage.getItem('ev-show-users') !== '0';
 
-  // 地圖載入後渲染用戶頭像
+  // 地圖載入後渲染用戶頭像（固定座標，唔跟地圖移動）
   if (typeof map !== 'undefined' && map) {
     renderUserMarkers();
-    map.on('moveend', () => {
-      if (APP_STATE.showUserAvatars) renderUserMarkers();
-    });
   } else {
-    // 等地圖載入完再渲染
     const checkMap = setInterval(() => {
       if (typeof map !== 'undefined' && map) {
         clearInterval(checkMap);
         renderUserMarkers();
-        map.on('moveend', () => {
-          if (APP_STATE.showUserAvatars) renderUserMarkers();
-        });
       }
     }, 500);
-    // 5 秒後停止嘗試
     setTimeout(() => clearInterval(checkMap), 5000);
   }
 }

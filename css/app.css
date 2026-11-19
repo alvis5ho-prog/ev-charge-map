@@ -1109,6 +1109,28 @@ ul { list-style: none; }
   display: flex; align-items: center; justify-content: center;
 }
 
+/* ====== Demo banner ====== */
+.demo-banner {
+  position: absolute;
+  top: calc(var(--sat) + 52px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 750;
+  background: #FEF3C7;
+  border: 1px solid #F59E0B;
+  color: #92400E;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-full);
+  white-space: nowrap;
+}
+[data-theme="dark"] .demo-banner {
+  background: #451A03;
+  border-color: #D97706;
+  color: #FDE68A;
+}
+
 /* ====== Chat / Notice Bar (ICQ-style) ====== */
 .fab-chat {
   bottom: calc(var(--sab) + 80px);
@@ -1323,26 +1345,23 @@ ul { list-style: none; }
   .fab-chat {
     bottom: calc(var(--sab) + 72px);
     right: calc(var(--sar) + var(--sp-3));
-    width: 52px; height: 52px;
-    z-index: calc(var(--z-panel) + 15);
+    width: 50px; height: 50px;
+    z-index: 800;
   }
   .fab {
-    width: 52px; height: 52px;
+    width: 50px; height: 50px;
     bottom: calc(var(--sab) + var(--sp-3));
     right: calc(var(--sar) + var(--sp-3));
-    z-index: calc(var(--z-panel) + 15);
+    z-index: 800;
   }
-  /* 電量滑桿佔左邊，唔好遮 FAB */
   .battery-dock {
     left: calc(var(--sal) + var(--sp-2));
     bottom: calc(var(--sab) + var(--sp-3));
-    width: 60px;
-    z-index: var(--z-fab);
+    width: 56px;
+    z-index: 700;
   }
-  /* 面板開時 FAB 都要可見 */
-  .panel.open ~ .fab,
-  .panel.open ~ .fab-chat {
-    z-index: calc(var(--z-panel) + 15);
+  .panel {
+    z-index: 600;
   }
 }
 
